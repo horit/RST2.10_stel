@@ -374,7 +374,7 @@ int fit_acf (struct complex *acf,int range,
 
   if (fabs(omega_high - omega_low) >= 2*ptr->v_err) {
     ptr->v = omega_base;
-    ptr->v_err = fabs(omega_high - omega_low);
+    ptr->v_err = ptr->v_err; /* fabs(omega_high - omega_low); */ /* modified according to task 2 of DAWG by Pasha, Tomo on Oct 14, 2014*/ 
     }
   }
   
@@ -486,7 +486,7 @@ int fit_acf (struct complex *acf,int range,
 		  npp++;
 	    }
 	  wbar = wbar/npp;
-	  ptr->sdev_l = sqrt(e2/sum_w/(npp - 2));
+	  ptr->sdev_l = sqrt(e2/sum_w*npp/(npp - 2)); /* This line was modified according to task 1 of DAWG, Pasha, Tomo on Oct 14, 2014 */ 
 
 	  if ((sum_w*sum_wk2 - sum_wk*sum_wk) <=0) {
 	    ptr->p_l_err = HUGE_VAL;
@@ -529,7 +529,7 @@ int fit_acf (struct complex *acf,int range,
 		  npp++;
 	    }
 	  wbar = wbar/npp;
-	  ptr->sdev_s = sqrt(e2/sum_w/(npp - 2));
+	  ptr->sdev_s = sqrt(e2/sum_w*npp/(npp - 2)); /* This line was modified according to task 1 of DAWG, Pasha,     Tomo on Oct 14, 2014 */
 
 	  if ((sum_w*sum_wk4 - sum_wk2*sum_wk2) <= 0.0 ) {
 	    ptr->p_s_err = HUGE_VAL;
