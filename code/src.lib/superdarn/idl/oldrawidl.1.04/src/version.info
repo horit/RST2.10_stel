@@ -1,0 +1,15 @@
+# $Log: version.info,v $
+# Revision 1.4  2006/08/17 14:39:35  code
+# Added origin code.
+#
+# Revision 1.3  2006/07/12 17:05:13  code
+# Modification to deal with origin code.
+#
+# Revision 1.2  2004/08/27 19:12:34  barnes
+# Added a function for setting the file pointer.
+#
+# Revision 1.1  2004/08/25 20:15:40  barnes
+# Initial revision
+#
+#
+oldrawidl.c 1.05

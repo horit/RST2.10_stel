@@ -1,0 +1,30 @@
+# $Log: version.info,v $
+# Revision 1.8  2006/09/15 19:26:03  code
+# Fixed signs.
+#
+# Revision 1.7  2005/08/10 17:24:25  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.6  2004/06/22 18:38:13  barnes
+# Replaced references of integers with "int".
+#
+# Revision 1.5  2004/06/21 22:58:42  barnes
+# Added missing header.
+#
+# Revision 1.4  2004/06/21 22:58:27  barnes
+# Added missing header.
+#
+# Revision 1.3  2004/06/08 15:06:36  barnes
+# Changed the filename to yyyymmdd.sss.csd
+#
+# Revision 1.2  2004/06/03 20:04:08  barnes
+# Adopted the use of strings as radar identifiers.
+#
+# Revision 1.1  2004/05/10 21:12:56  barnes
+# Initial revision
+#
+#
+buffer.c 1.02
+compress.c 1.02
+loginfo.c 1.02
+rtcsd.c 1.04

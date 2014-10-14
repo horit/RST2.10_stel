@@ -1,0 +1,17 @@
+# $Log: version.info,v $
+# Revision 1.4  2004/08/25 19:00:25  barnes
+# Fixes for MacOS X (Darwin)
+#
+# Revision 1.3  2004/06/16 16:59:08  barnes
+# Added missing header.
+#
+# Revision 1.2  2004/04/26 21:10:43  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/02/24 18:42:18  barnes
+# Initial revision
+#
+#
+isect.c 1.04
+poly.c 1.03
+transform.c 1.02

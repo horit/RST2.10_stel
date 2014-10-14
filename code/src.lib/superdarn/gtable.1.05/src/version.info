@@ -1,0 +1,18 @@
+# $Log: version.info,v $
+# Revision 1.5  2006/04/28 21:06:31  barnes
+# Fixed bug in dealing with missing beams in scans.
+#
+# Revision 1.4  2006/03/14 23:19:35  barnes
+# Fixed bug in confusing maxrange with maxbeam.
+#
+# Revision 1.3  2006/03/14 22:25:49  barnes
+# Modification to handle radars with extra beams.
+#
+# Revision 1.2  2004/10/07 14:03:43  barnes
+# Removed the write routine.
+#
+# Revision 1.1  2004/08/20 13:19:49  barnes
+# Initial revision
+#
+#
+gtable.c 1.04

@@ -1,0 +1,1 @@
+../../code/src.lib/superdarn/fitacf.2.00/include/badlags.h

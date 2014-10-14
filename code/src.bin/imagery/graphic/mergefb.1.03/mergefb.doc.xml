@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>mergefb</name>
+<location>src.bin/imagery/graphic/mergefb</location>
+<syntax>mergefb --help</syntax>
+<syntax>mergefb -ppm [<ar>options</ar>] <ar>backimage</ar> <ar>frontimage</ar></syntax>
+<syntax>mergefb -ppmx [<ar>options</ar>] <ar>backimage</ar> <ar>frontimage</ar></syntax>
+<syntax>mergefb -xml [<ar>options</ar>] <ar>backimage</ar> <ar>frontimage</ar></syntax>
+
+
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+
+<option><on>-smooth</on><od>Apply a simple linear interpolation to smooth the images.</od>
+</option>
+
+
+<option><on>-tf <ar>factor</ar></on><od>Set the transparency factor to <ar>factor</ar>. The transparency factor controls how the foreground image is blended with the background. A ratio is calculated using the equation (1-<ar>factor</ar>)+<ar>c</ar>*<ar>factor</ar>, where <ar>c</ar> is the value of the alpha channel of the pixel in the foreground image. This ratio is then used to blend the foreground image with the background.</od>
+</option>
+
+<option><on>-add</on><od>Do not blend the foreground image with the background do a straight addition.</od>
+</option>
+
+<option><on>-fd <ar>fade</ar></on><od>Set the fading factor to <ar>fade</ar>. The fading factor determines the proportion of the foreground image that is merged with a background. A value of zero effectively gives the background image and a value of one gives both images. The factor can be used to 'fade' in the foreground image for animations.</od></option>
+
+<option><on><ar>backimage</ar></on><od>filename of the background image.</od></option>
+
+<option><on><ar>frontimage</ar></on><od>filename of the foreground image.</od></option>
+
+<option><on>-bppm</on><od>the background image file is a Portable PixMap (PPM) image.</od>
+</option>
+<option><on>-bppmx</on><od>the background image file is an extended Portable PixMap (PPMX) image.</od>
+</option>
+<option><on>-bxml</on><od>the background image file is an XML image representation.</od>
+</option>
+
+
+<option><on>-fppm</on><od>the foreground image file is a Portable PixMap (PPM) image.</od>
+</option>
+<option><on>-fppmx</on><od>the foreground image file is an extended Portable PixMap (PPMX) image.</od>
+</option>
+<option><on>-fxml</on><od>the foreground image file is an XML image representation.</od>
+</option>
+
+<option><on>-ppm</on><od>produce a Portable PixMap (PPM) image as the output.</od>
+</option>
+<option><on>-ppmx</on><od>produce an extended Portable PixMap (PPMX) image as the output.</od>
+</option>
+<option><on>-xml</on><od>produce an XML image representation as the output.</od>
+</option>
+
+
+
+<synopsis><p>Merge two bitmaps.</p></synopsis>
+
+
+<description><p>Merge two bitmaps.</p>
+<p>This program merges two bitmaps together and can be used to merge a background image such as a globe with a foreground image such as a data plot.</p>
+<p>The program can produce Portable PixMap (PPM) file, extended Portable PixMap (PPMX) file, or an XML image representation. The default output is XML.</p>
+</description>
+<example>
+<command>mergefb -add -ppm -bppm -fppm bg.ppm fg.ppm &gt; image.ppm</command>
+<description>Merge the Portable PixMap (PPM) file "<code>bg.ppm</code>" with "<code>fg.ppm</code>" to produce the output "<code>image.ppm</code>".</description>
+</example>
+<example type="image>example1</example>
+
+
+
+</binary>

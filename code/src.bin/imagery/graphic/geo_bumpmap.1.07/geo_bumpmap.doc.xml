@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>geo_bumpmap</name>
+<location>src.bin/imagery/graphic/geo_bumpmap</location>
+<syntax>geo_bumpmap --help</syntax>
+<syntax>geo_bumpmap [<ar>options</ar>] <ar>elvname</ar></syntax>
+
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+
+<option><on>-cf <ar>cfname</ar></on><od>read command line options from the file <ar>cfname</ar>.</od>
+</option>
+<option><on>-wdt <ar>width</ar></on><od>set the width of the bump map to <ar>width</ar>.</od>
+</option>
+<option><on>-hgt <ar>height</ar></on><od>set the height of the bump map to <ar>height</ar>.</od>
+</option>
+<option><on>-sf <ar>scale</ar></on><od>set the scale factor (magnification) to <ar>scale</ar>. The default scale factor is 1.</od>
+</option>
+<option><on>-ortho</on><od>use an orthographic projection.</od>
+</option>
+<option><on>-stereo</on><od>use a stereographic projection.</od>
+</option>
+<option><on>-gvp</on><od>use a general vertical projection.</od>
+</option>
+<option><on>-lat <ar>lat</ar></on><od>center the plot on the latitude given by <ar>lat</ar>.</od>
+</option>
+<option><on>-lon <ar>lon</ar></on><od>center the plot on the longitude given by <ar>lon</ar>.</od>
+</option>
+<option><on>-latmin <ar>latmin</ar></on><od>adjust the scale factor so that the lowest visible latitude is  <ar>latmin</ar>. Applies when the stereographic projection is used.</od>
+</option>
+<option><on>-mag</on><od>use magnetic coordinates.</od>
+</option>
+<option><on>-rotate</on><od>rotate the plot so that the local noon is at the top of the plot.</od>
+</option>
+<option><on>-flip</on><od>flip the direction of the X-axis.</od>
+</option>
+<option><on>-square</on><od>force the use of a square bounding box around the bump map.</od>
+</option>
+<option><on>-lst</on><od>use local solar time rather than local time.</od>
+</option>
+
+<option><on>-d <ar>yyyymmdd</ar></on><od>plot for the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-t <ar>hr:mn</ar></on><od>plot for the time <ar>hr:mn</ar>.</od>
+</option>
+
+<option><on>-smooth</on><od>Apply a simple linear interpolation to smooth the elevation data. This is useful when the plot covers a small area of the globe.</od>
+</option>
+
+<option><on>-ka <ar>ka</ar></on><od>set the ambient co-efficient of the Phong model to <ar>ka</ar>.</od>
+</option>
+
+<option><on>-kd <ar>kd</ar></on><od>set the diffuse co-efficient of the Phong model to <ar>kd</ar>.</od>
+</option>
+
+<option><on>-ks <ar>ks</ar></on><od>set the specular co-efficient of the Phong model to <ar>ks</ar>.</od>
+</option>
+
+
+<option><on>-n <ar>n</ar></on><od>set the power the specular component is raised to in the Phong model to <ar>n</ar>.</od>
+</option>
+<option><on><ar>elvname</ar></on><od>filename of the elevation data.</od></option>
+
+<synopsis><p>Generate a bump-map from elevation data.</p></synopsis>
+
+<description><p>Generate a bump-map from elevation data.</p>
+<p>A bump map contains the lighting and shading data that can be applied to a plot to indicate the surface texturing of the Earth. The command line options define the plot size and map projection to use for the bump map. The same map projection should be used to generate the plot that the bump map is going to be appliefd to.</p>
+<p>The program uses the elevation data and a simple phong model to find calculate the bump map.</p> 
+</description>
+
+<example>
+<command>geo_bumpmap -ortho -lat 50 -lon 105 -wdt 540 -hgt 540 topo.elv.dat &gt; bump.dat</command>
+<description>Generate a bumpmap for an orthographic projection with the longitude of 105 degrees and the latitude of 50 degrees centered in the plot. The output is written to the file "<code>bump.dat</code>".</description>
+</example>
+<example type="image">example1</example>
+
+<example>
+<command>geo_bumpmap -stereo -lat 90 -wdt 540 -hgt 540 topo.elv.dat &gt; bump.dat</command>
+<description>Generate a bumpmap for an stereographic projection of the north pole. The output is written to the file "<code>bump.dat</code>".</description>
+</example>
+<example type="image">example2</example>
+
+
+
+
+
+</binary>

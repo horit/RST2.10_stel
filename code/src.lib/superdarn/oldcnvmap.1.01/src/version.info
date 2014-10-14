@@ -1,0 +1,7 @@
+# $Log: version.info,v $
+# Revision 1.1  2004/10/08 20:51:08  barnes
+# Initial revision
+#
+#
+readmap.c 1.01
+writemap.c 1.01

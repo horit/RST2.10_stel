@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>plotkey</name>
+<location>src.bin/general/graphic/plotkey</location>
+<syntax>plotkey --help</syntax>
+<syntax>plotkey [-vertical] <ar>name</ar></syntax>
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+<option><on>-vertical</on><od>plot the color bar vertically.</od>
+</option>
+<option><on><ar>name</ar></on><od>filename of the colorbar.</od>
+</option>
+<synopsis><p>Plot the colors in a color bar and save them as a Portable PixMap (PPM) file.</p></synopsis>
+<description>
+<p>Plot the colors in a color bar and save them as a Portable PixMap (PPM) file.</p>
+<p>The PPM will be one pixel high and as many pixels wide as there are colors in the color bar. The image will be one pixel wide if the "<code>-vertical</code>" option is specified.</p>
+</description>
+<example>
+<command>plotkey rainbow.key &gt; rainbow.ppm</command>
+<description>Create a Portable PixMap (PPM) file called "<code>rainbow.key</code>" from the color bar in the file "<code>rainbow.key</code>"</description>
+</example>
+
+
+
+</binary>

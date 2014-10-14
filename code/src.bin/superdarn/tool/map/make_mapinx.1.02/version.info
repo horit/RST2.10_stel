@@ -1,0 +1,9 @@
+# $Log: version.info,v $
+# Revision 1.2  2005/08/10 22:09:09  barnes
+# Added option to dump command line options.
+#
+# Revision 1.1  2004/10/19 21:20:19  barnes
+# Initial revision
+#
+#
+make_mapinx.c 1.02

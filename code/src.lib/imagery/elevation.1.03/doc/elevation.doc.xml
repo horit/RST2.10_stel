@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>elevation</name>
+<location>src.lib/imagery/elevation</location>
+
+<function>
+<name>ElevationLoad</name>
+<location>src.lib/imagery/elevation</location>
+<header>imagery/elevation.h</header>
+<syntax>int ElevationLoad(FILE *fp,<sn href="structElevationData.html">struct ElevationData</sn> *ptr);</syntax>
+<description><p>The <fn href="ElevationLoad.html">ElevationLoad</fn> function loads elevation data from a file.</p>
+<p>The elevation data is stored in the structure pointed to by the argument <ar>ptr</ar>.</p>
+
+
+</description> 
+<returns>Returns zero on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+
+<example type="rplot">ElevationLoad</example>  
+<example type="source">ElevationLoad.c</example>
+
+</function>
+
+<structure>
+ <name>ElevationData</name>
+ <location>src.lib/imagery/elevation</location>
+ <header>imagery/eldata.h</header>
+ <struct>
+
+    <member>
+      <code>int16 lat;</code>
+      <description>Degree component of the lowest latitude.</description>
+    </member>
+
+    <member>
+      <code>int16 lon;</code>
+      <description>Degree component of the lowest longitude.</description>
+    </member>
+
+   <member>
+      <code>int16 latsec;</code>
+      <description>Seconds component of the lowest latitude.</description>
+    </member>
+
+  <member>
+      <code>int16 lonsec;</code>
+      <description>Seconds component of the lowest longitude.</description>
+    </member>
+
+   <member>
+      <code>int32 numlat;</code>
+      <description>Number of latitude steps.</description>
+    </member>
+
+   <member>
+      <code>int32 numlat;</code>
+      <description>Number of longitude steps.</description>
+   </member>
+
+   <member>
+      <code>int32 latstp;</code>
+      <description>Stepping factor of latitude.</description>
+    </member>
+
+    <member>
+      <code>int32 lonstp;</code>
+      <description>Stepping factor of longitude.</description>
+    </member>
+
+   <member>
+      <code>int16 min;</code>
+      <description>Minimum elevation.</description>
+    </member>
+
+   <member>
+      <code>int16 max;</code>
+      <description>Maximum elevation.</description>
+    </member>
+
+   <member>
+      <code>int16 *data;</code>
+      <description>Pointer to the array of elevations.</description>
+    </member>
+
+  </struct>
+<description>
+<p>The <sn href="structElevationData.html">struct ElevationData</sn> structure stores elevation data.</p>
+</description>
+</structure>
+
+
+
+</library>
+
+

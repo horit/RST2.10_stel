@@ -1,0 +1,15 @@
+# $Log: version.info,v $
+# Revision 1.4  2005/08/10 18:49:35  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.3  2004/10/28 13:59:27  barnes
+# Added missing header.
+#
+# Revision 1.2  2004/06/22 17:52:32  barnes
+# Changed references of Long to Int.
+#
+# Revision 1.1  2004/05/10 21:43:29  barnes
+# Initial revision
+#
+#
+make_fitinx.c 1.04

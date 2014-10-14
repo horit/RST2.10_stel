@@ -1,0 +1,70 @@
+# $Log: version.info,v $
+# Revision 1.21  2005/08/10 15:39:24  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.20  2004/06/21 22:50:36  barnes
+# Added missing header.
+#
+# Revision 1.19  2004/05/10 21:59:22  barnes
+# Removed redundant code.
+#
+# Revision 1.18  2004/04/27 22:50:35  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.17  2003/04/10 17:46:35  barnes
+# Changed window name.
+#
+# Revision 1.16  2003/03/14 20:17:51  barnes
+# Included a name for the plot.
+#
+# Revision 1.15  2003/03/14 18:45:38  barnes
+# Modification to support extended PPM output.
+#
+# Revision 1.14  2003/03/13 23:41:14  barnes
+# Added version number to metadata.
+#
+# Revision 1.13  2003/03/13 14:37:47  barnes
+# Include information (metadata) in the Rplot XML document.
+#
+# Revision 1.12  2003/03/09 17:37:42  barnes
+# Changed AACGM header name.
+#
+# Revision 1.11  2003/03/07 03:06:30  barnes
+# Changed command line options.
+#
+# Revision 1.10  2003/03/01 03:21:37  barnes
+# Major modifications to support the base libraries and Rplot XML output.
+#
+# Revision 1.9  2001/06/27 21:08:56  barnes
+# Added license tag
+#
+# Revision 1.8  2001/01/29 18:41:18  barnes
+# Added Author Name
+#
+# Revision 1.7  2000/08/22 15:13:20  barnes
+# Added return to main.
+#
+# Revision 1.6  2000/08/16 22:24:49  barnes
+# Changed return type of main().
+#
+# Revision 1.5  2000/08/06 21:36:05  barnes
+# Fixed bug in decoding X flag.
+#
+# Revision 1.4  2000/08/06 21:05:10  barnes
+# Updated version info.
+#
+# Revision 1.3  2000/07/26 18:45:18  barnes
+# Added X term support.
+#
+# Revision 1.2  2000/07/24 15:15:31  barnes
+# Function name conflict.
+#
+# Revision 1.1  1999/12/17 19:30:50  barnes
+# Initial revision
+#
+plot_circle.c 1.04
+plot_radial.c 1.04
+text_box.c 1.02
+plot_time.c 1.08
+vec_plot.c 1.29
+

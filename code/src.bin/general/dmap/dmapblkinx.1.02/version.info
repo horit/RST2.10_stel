@@ -1,0 +1,9 @@
+# $Log: version.info,v $
+# Revision 1.2  2005/08/08 15:03:40  barnes
+# Added option to dump the command line options
+#
+# Revision 1.1  2004/11/10 14:30:31  barnes
+# Initial revision
+#
+#
+dmapblkinx.c 1.02

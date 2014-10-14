@@ -1,0 +1,1 @@
+../../code/src.lib/imagery/szamap.1.03/include/szamap.h

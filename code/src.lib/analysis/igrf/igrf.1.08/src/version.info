@@ -1,0 +1,32 @@
+# $Log: version.info,v $
+# Revision 1.8  2006/03/20 15:43:48  barnes
+# Fixed bug in handling more recent co-efficients.
+#
+# Revision 1.7  2006/01/30 21:37:07  barnes
+# Modified to extend out to 2010.
+#
+# Revision 1.6  2004/05/04 22:42:01  barnes
+# Changed the header name.
+#
+# Revision 1.5  2004/04/26 21:24:13  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.4  2004/04/26 15:51:22  barnes
+# Changed calling convention.
+#
+# Revision 1.3  2001/06/27 20:43:53  barnes
+# Added license tag
+#
+# Revision 1.2  2001/01/29 18:41:18  barnes
+# Added Author Name
+#
+# Revision 1.1  1999/12/16 22:22:48  barnes
+# Initial revision
+#
+dihf.c 1.06
+extrapshc.c 1.03
+getshc.c 1.04
+igrfcall.c 1.08
+interpshc.c 1.05
+magcmp.c 1.04
+shval3.c 1.06

@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>grplot</name>
+<location>src.lib/general/grplot</location>
+<function>
+<name>GrPlotAxisEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotAxisEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotAxisStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotAxisStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotAxisValueEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotAxisValueEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotAxisValueStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotAxisValueStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBarEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBarEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBarPlotEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBarPlotEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBarPlotStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBarPlotStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBarStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBarStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBezierEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBezierEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBezierStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBezierStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBodyEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBodyEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBodyStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBodyStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBoxEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBoxEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotBoxStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotBoxStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotDimensionEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotDimensionEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotDimensionStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotDimensionStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotExtentEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotExtentEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotExtentStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotExtentStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFillEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFillEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFillPlotEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFillPlotEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFillPlotStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFillPlotStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFillStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFillStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFitImageEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFitImageEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFitImageNameEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFitImageNameEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFitImageNameStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFitImageNameStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFitImageStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFitImageStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFitImageXMLEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFitImageXMLEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFitImageXMLStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFitImageXMLStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFitImageXMLText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFitImageXMLText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFloatEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFloatEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFloatStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFloatStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFloatText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotFloatText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotFree</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>void GrPlotFree(struct GrPlotData *ptr);</syntax>
+</function>
+<function>
+<name>GrPlotIgnoreEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIgnoreEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIgnoreStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIgnoreStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIgnoreText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIgnoreText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotImageEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotImageEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotImageNameEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotImageNameEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotImageNameStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotImageNameStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotImageStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotImageStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotImageXMLEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotImageXMLEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotImageXMLStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotImageXMLStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotImageXMLText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotImageXMLText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIncludeEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIncludeEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIncludeStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIncludeStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIncludeUser</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIncludeUser(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIndexEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIndexEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIndexStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIndexStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIntEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIntEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIntStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIntStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotIntText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotIntText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLabelEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLabelEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLabelStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLabelStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLabelValueEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLabelValueEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLabelValueStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLabelValueStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLimitEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLimitEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLimitStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLimitStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLineEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLineEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLinePlotEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLinePlotEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLinePlotStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLinePlotStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotLineStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotLineStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotMake</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>struct GrPlotData *GrPlotMake(struct XMLdata *xml);</syntax>
+</function>
+<function>
+<name>GrPlotMakeText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>char *GrPlotMakeText(double value,double min,double max,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotPadString</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPadString(char *str,float *l,float *r, float *b,float *t);</syntax>
+</function>
+<function>
+<name>GrPlotPanelEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPanelEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotPanelStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPanelStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotPointEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPointEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotPointStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPointStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotPointString</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPointString(char *str,float *x,float *y);</syntax>
+</function>
+<function>
+<name>GrPlotPolygonEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPolygonEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotPolygonStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPolygonStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotPolyPointEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPolyPointEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotPolyPointStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotPolyPointStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotRestore</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotRestore(struct GrPlotBlock *ptr);</syntax>
+</function>
+<function>
+<name>GrPlotSave</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>struct GrPlotBlock *GrPlotSave(struct XMLdata *xml,char *name,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSetCloseFile</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetCloseFile(struct GrPlotData *plt, void (*close)(void *,void *));</syntax>
+</function>
+<function>
+<name>GrPlotSetConvert</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetConvert(struct GrPlotData *plt, int (*text)(char *,char *,double *,void *), void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSetFileData</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetFileData(struct GrPlotData *plt,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSetImageSize</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetImageSize(struct GrPlotData *plt, int (*size)(char *,int *,int *,void *), void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSetInclude</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetInclude(struct GrPlotData *plt, int (*text)(char *,int (*)(char *,int,void *), void *,void *),void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSetMakeText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetMakeText(struct GrPlotData *plt, char *(*text)(char *,double,double,double,void *), void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSetOpenFile</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetOpenFile(struct GrPlotData *plt, void *(*open)(char *,char *,char *,char *,void *));</syntax>
+</function>
+<function>
+<name>GrPlotSetReadFile</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetReadFile(struct GrPlotData *plt, int (*read)(void *,char *,char *,char *, double *,double *,void *));</syntax>
+</function>
+<function>
+<name>GrPlotSetRplot</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetRplot(struct GrPlotData *plt,struct Rplot *rplot);</syntax>
+</function>
+<function>
+<name>GrPlotSetTextBox</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSetTextBox(struct GrPlotData *plt, int (*text)(char *,float,int,char *,float *,void *), void *data);</syntax>
+</function>
+<function>
+<name>GrPlotShapeEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotShapeEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotShapeStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotShapeStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotStringEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotStringEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotStringStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotStringStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotStringText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotStringText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolDrawEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolDrawEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolDrawStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolDrawStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolPlotEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolPlotEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolPlotStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolPlotStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolStoreEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolStoreEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolStoreStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolStoreStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotSymbolStoreText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotSymbolStoreText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotTextEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotTextEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotTextStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotTextStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotTickEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotTickEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotTickStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotTickStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotTitleEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotTitleEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotTitleStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotTitleStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotValueEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotValueEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotValueStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotValueStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotValueText</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotValueText(char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotZeroEnd</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotZeroEnd(char *name,char *buf,int sze,void *data);</syntax>
+</function>
+<function>
+<name>GrPlotZeroStart</name>
+<location>src.lib/general/grplot</location>
+<header>general/grplot.h</header>
+<syntax>int GrPlotZeroStart(char *name,int atnum,char **atname,char **atval, char *buf,int sze,void *data);</syntax>
+</function>
+</library>

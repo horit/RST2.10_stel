@@ -1,0 +1,14 @@
+# Makefile for NNetFreadNet
+# =========================
+# by R.J.Barnes
+#
+#
+
+INCLUDE=-I$(IPATH)/general 
+IGNVER=1
+OBJS = NNetFreadNet.o
+OUTPUT = NNetFreadNet
+LIBS= -lrnnet.1 -lrcnv.1
+SLIB= -lm
+include $(MAKEBIN)
+ 

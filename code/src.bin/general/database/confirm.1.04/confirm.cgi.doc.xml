@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>confirm.cgi</name>
+<location>src.bin/general/database/confirm.cgi</location>
+<syntax>confirm.cgi</syntax>
+<synopsis><p>CGI script for confirming database submissions.</p></synopsis>
+<description><p>CGI script for confirming database submissions.</p></description>
+
+</binary>

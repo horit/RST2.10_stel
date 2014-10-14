@@ -1,0 +1,12 @@
+# $Log: version.info,v $
+# Revision 1.3  2004/08/25 21:54:36  barnes
+# Modification to deal with Big-Endian ordering.
+#
+# Revision 1.2  2004/04/26 20:14:32  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/03/01 18:17:04  barnes
+# Initial revision
+#
+#
+xwin.c 1.03

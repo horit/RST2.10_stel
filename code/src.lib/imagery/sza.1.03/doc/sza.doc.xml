@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>sza</name>
+<location>src.lib/imagery/sza</location>
+
+<function>
+<name>SZAAngle</name>
+<location>src.lib/imagery/sza</location>
+<header>imagery/sza.h</header>
+<syntax>double SZAAngle(double lon,double lat,double dec,double Hangle);</syntax>
+<description><p>The <fn href="SZAAngle.html">SZAAngle</fn> function calculates the Solar-Zenith Angle at a given location and time.</p>
+<p>The geographic position of the point to calculate the angle for is given by the arguments <ar>lon</ar> and <ar>lat</ar>. The solar declination angle and the solar hour angle are given by the arguments <ar>dec</ar> and <ar>Hangle</ar>.</p>
+</description> 
+<returns>Returns the Solar-Zenith Angle in degrees.</returns>
+<example type="source">SZAAngle.c</example>
+
+</function>
+
+
+<function>
+<name>SZAEqOfTime</name>
+<location>src.lib/imagery/sza</location>
+<header>imagery/sza.h</header>
+<syntax>double SZAEqOfTime(double lon,int yr);</syntax>
+<description><p>The <fn href="SZAEqOfTime.html">SZAEqOfTime</fn> function calculates the Equation of Time for a given longitude and year.</p>
+<p>The mean solar longitude is given by the argument <ar>lon</ar> and the year by the argument <ar>yr</ar>.</p>
+</description> 
+<returns>Returns the calculated value for the Equation of Time.</returns>
+<example type="source">SZAEqOfTime.c</example>
+
+
+</function>
+
+<function>
+<name>SZASolarLoc</name>
+<location>src.lib/imagery/sza</location>
+<header>imagery/sza.h</header>
+<syntax>int SZASolarLoc(int yr,int t1,double *lon,double *dec);</syntax>
+<description><p>The <fn href="SZASolarLoc.html">SZASolarLoc</fn> function calculates the location of the sun.</p>
+<p>The year is given by the argument <ar>yr</ar> and the time by the argument <ar>t1</ar> expressed as seconds from the start of the year.</p>
+<p>The calculated mean solar longitude and declination are stored at the locations pointed to by the arguments <ar>lon</ar> and <ar>dec</ar>.</p>
+</description> 
+<returns>Returns zero.</returns>
+
+<example type="source">SZASolarLoc.c</example>
+
+</function>
+
+
+
+
+
+</library>
+
+

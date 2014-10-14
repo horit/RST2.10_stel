@@ -1,0 +1,14 @@
+# $Log: version.info,v $
+# Revision 1.4  2006/08/31 13:52:19  code
+# Added the ability to select seconds of year.
+#
+# Revision 1.3  2005/08/08 15:15:49  barnes
+# Added option to dump the command line options
+#
+# Revision 1.2  2004/04/28 19:00:09  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/02/25 00:27:41  barnes
+# Initial revision
+#
+etime.c 1.04

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>phong</name>
+<location>src.lib/imagery/phong</location>
+
+<function>
+<name>PhongModel</name>
+<location>src.lib/imagery/phong</location>
+<header>imagery/phong.h</header>
+<syntax>void PhongModel(int wdt,int hgt,int emin,float *zbuf,float *Lvec,
+                     float diff,float spec,float speca,
+                     float **dptr,float **sptr);</syntax>
+<description><p>The <fn href="PhongModel.html">PhongModel</fn> function applies the Phong illumination model to a grid of elevations.</p>
+<p>The width and height of the grid are given by the arguments <ar>wdt</ar> and <ar>hgt</ar>. The argument <ar>emin</ar> specifies the lowest elevation at which to apply the model, points in the grid with elevations below this threshold are ignored. The elevations are taken from the two-dimensional array pointed to by the argument <ar>zbuf</ar>.</p>
+<p>The lighting vector is given by the first three elements of the array pointed to by the argument <ar>Lvec</ar>. The observer is assumed to be looking along the Z-axis.</p>
+<p>The coefficients for diffuse, specular, and the specular power term are given by the arguments <ar>diff</ar>, <ar>spec</ar> and <ar>speca</ar>.</p>
+<p>The function two memory buffers containing two-dimensional arrays of floating point numbers of size equal to the width and height arguments. These arrays are used to store the calculated diffuse and specular components of the Phong model</p>  
+<p>The pointers to the arrays are stored at the locations given by the arguments <ar>dptr</ar> and <ar>sptr</ar>. When the arrays are no longer required the memory allocated to store them should be freed.</p>
+
+</description> 
+<returns>None.</returns>
+<errors>None.</errors>
+
+<example type="rplot">PhongModel</example>
+<example type="source">PhongModel.c</example>
+
+
+</function>
+
+</library>
+

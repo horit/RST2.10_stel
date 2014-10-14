@@ -1,0 +1,12 @@
+# $Log: version.info,v $
+# Revision 1.3  2005/08/10 17:17:44  barnes
+# Added option to dump command line options.
+#
+# Revision 1.2  2004/10/28 13:56:09  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 21:40:23  barnes
+# Initial revision
+#
+#
+make_csd.c 1.03

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>geo_texturefb</name>
+<location>src.bin/imagery/graphic/geo_texturefb</location>
+<syntax>geo_texturefb --help</syntax>
+<syntax>geo_texturefb [<ar>options</ar>] <ar>dayimage</ar> [<ar>nightimage</ar>]</syntax>
+<syntax>geo_texturefb -ppm [<ar>options</ar>] <ar>dayimage</ar> [<ar>nightimage</ar>]</syntax>
+<syntax>geo_texturefb -ppmx [<ar>options</ar>] <ar>dayimage</ar> [<ar>nightimage</ar>]</syntax>
+<syntax>geo_texturefb -xml [<ar>options</ar>] <ar>dayimage</ar> [<ar>nightimage</ar>]</syntax>
+
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+
+<option><on>-cf <ar>cfname</ar></on><od>read command line options from the file <ar>cfname</ar>.</od>
+</option>
+<option><on>-wdt <ar>width</ar></on><od>set the width of the plot to <ar>width</ar>.</od>
+</option>
+<option><on>-hgt <ar>height</ar></on><od>set the height of the plot to <ar>height</ar>.</od>
+</option>
+
+<option><on>-sf <ar>scale</ar></on><od>set the scale factor (magnification) to <ar>scale</ar>. The default scale factor is 1.</od>
+</option>
+<option><on>-ortho</on><od>use an orthographic projection.</od>
+</option>
+<option><on>-stereo</on><od>use a stereographic projection.</od>
+</option>
+<option><on>-gvp</on><od>use a general vertical projection.</od>
+</option>
+<option><on>-lat <ar>lat</ar></on><od>center the plot on the latitude given by <ar>lat</ar>.</od>
+</option>
+<option><on>-lon <ar>lon</ar></on><od>center the plot on the longitude given by <ar>lon</ar>.</od>
+</option>
+<option><on>-latmin <ar>latmin</ar></on><od>adjust the scale factor so that the lowest visible latitude is  <ar>latmin</ar>. Applies when the stereographic projection is used.</od>
+</option>
+<option><on>-mag</on><od>use magnetic coordinates.</od>
+</option>
+<option><on>-rotate</on><od>rotate the plot so that the local noon is at the top of the plot.</od>
+</option>
+<option><on>-flip</on><od>flip the direction of the X-axis.</od></option>
+<option><on>-square</on><od>force the use of a square bounding box around the plot.</od></option>
+
+<option><on>-coast</on><od>plot coastlines.</od></option>
+
+<option><on>-bnd</on><od>plot state boundaries.</od></option>
+
+<option><on>-grd</on><od>plot a grid.</od></option>
+
+
+<option><on>-lst</on><od>use local solar time rather than local time.</od>
+</option>
+
+
+<option><on>-term</on><od>plot the terminator.</od>
+</option>
+<option><on>-fterm</on><od>plot a filled, graduated terminator.</od>
+</option>
+
+<option><on>-tmin <ar>tmin</ar></on><od>set the filled terminator shading factor to <ar>tmin</ar>. The shading factor controls how dark the terminator appears, a value of 0 will make it appear black, a value of 1.0 will make the terminator disappear.</od>
+</option>
+<option><on>-tscl <ar>tscl</ar></on><od>sets the filled terminator graduation factor to <ar>tscl</ar>. The graduation factor controls how the edge of the terminator fades, a value of 0 will force a hard edge, values of 10 or more will produce a gradual fading.</od>
+</option>
+
+<option><on>-lnewdt <ar>lnewdt</ar></on><od>set the line width to <ar>lnewdt</ar>.</od>
+</option>
+
+<option><on>-bgcol <ar>rrggbb</ar></on><od>set the color of the background color to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+
+
+<option><on>-grdcol <ar>rrggbb</ar></on><od>set the color of the grid to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+
+
+<option><on>-cstcol <ar>rrggbb</ar></on><od>set the color of the coastline to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-bndcol <ar>rrggbb</ar></on><od>set the color of the state boundaries to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+
+<option><on>-trmcol <ar>rrggbb</ar></on><od>set the color of the terminator outline to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+
+<option><on>-d <ar>yyyymmdd</ar></on><od>plot for the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-t <ar>hr:mn</ar></on><od>plot for the time <ar>hr:mn</ar>.</od>
+</option>
+
+
+
+<option><on>-smooth</on><od>Apply a simple linear interpolation to smooth the texture data. This is useful when the plot covers a small area of the globe.</od>
+</option>
+
+<option><on>-name <ar>name</ar></on><od>assign the name <ar>name</ar> to the bitmap. This is used by those image formats that support named images (PPMX,XML).</od>
+</option>
+
+
+<option><on>-dppm</on><od>the texture for the day side of the Earth is a Portable PixMap (PPM) image.</od>
+</option>
+<option><on>-dppmx</on><od>the texture for the day size of the  Earth is an extended Portable PixMap (PPMX) image.</od>
+</option>
+<option><on>-dxml</on><od>the texture for the day side of the Earth is an XML image representation.</od>
+</option>
+
+
+<option><on>-nppm</on><od>the texture for the night side of the Earth is  a Portable PixMap (PPM) image.</od>
+</option>
+<option><on>-nppmx</on><od>the texture for the night side of the Earth is an extended Portable PixMap (PPMX) image.</od>
+</option>
+<option><on>-nxml</on><od>the texture for the night side of the Earth is an XML image representation.</od>
+</option>
+
+
+<option><on><ar>dayimage</ar></on><od>filename of the texture for the day side of the Earth.</od></option>
+
+<option><on><ar>nightimage</ar></on><od>filename of the texture for the night side of the Earth.</od></option>
+
+
+<option><on>-ppm</on><od>produce a Portable PixMap (PPM) image as the output.</od>
+</option>
+<option><on>-ppmx</on><od>produce an extended Portable PixMap (PPMX) image as the output.</od>
+</option>
+<option><on>-xml</on><od>produce an XML image representation as the output.</od>
+</option>
+
+
+
+<synopsis><p>Generate a texture mapped image of the Earth.</p></synopsis>
+
+<description><p>Generate a texture mapped image of the Earth.</p>
+
+<p>This program produces a texture mapped image of the Earth in the form of a bitmap image. The command line options define the plot size and map projection to use for the bitmap.</p>
+<p>One or two texture maps can be specified on the command line. If only one is specified then the night side of the Earth will simply be shaded. If two texture maps are included, then the second texture map is used for the night side of the Earth.</p>
+</description>
+
+<example>
+<command>geo_texturefb -ortho -lat 55 -lon -105 -d 20000716 -t 0:11 -fterm -ppm -nppm -dppm day.dat night.dat &gt; bg.ppm</command>
+<description>Use the texture maps "<code>day.dat</code>" and "<code>night.dat</code>" to create an orthographic projection of the Earth centred over the continental United States.</description>
+</example>
+<example type="image">example1</example>
+
+
+<example>
+<command>geo_texturefb -ortho -lat 55 -lon -105 -d 20000716 -t 6:11 -fterm -ppm -dppm day.dat &gt; bg.ppm</command>
+<description>Use the texture map "<code>day.dat</code>" to create an orthographic projection of the Earth centred over the continental United States.</description>
+</example>
+<example type="image">example2</example>
+
+
+
+
+
+</binary>

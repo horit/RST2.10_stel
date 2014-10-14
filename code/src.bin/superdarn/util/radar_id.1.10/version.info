@@ -1,0 +1,34 @@
+# $Log: version.info,v $
+# Revision 1.10  2005/08/10 15:19:21  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.9  2004/06/03 19:41:31  barnes
+# Adopted the use of strings as radar identifier codes and added the option
+#  to display radar location.
+#
+# Revision 1.8  2004/05/10 21:49:09  barnes
+# Removed redundant code.
+#
+# Revision 1.7  2003/02/25 21:32:56  barnes
+# Modification to use the base libraries.
+#
+# Revision 1.6  2001/06/27 21:07:31  barnes
+# Added license tag
+#
+# Revision 1.5  2001/01/29 18:41:19  barnes
+# Added Author Name
+#
+# Revision 1.4  2000/08/22 15:13:20  barnes
+# Added return to main.
+#
+# Revision 1.3  2000/08/16 22:47:41  barnes
+# changed return type of main().
+#
+# Revision 1.2  2000/08/11 12:37:58  barnes
+# Added help information.
+#
+# Revision 1.1  2000/07/07 20:51:26  barnes
+# Initial revision
+#
+#
+radar_id.c 1.10

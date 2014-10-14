@@ -1,0 +1,9 @@
+# $Log: version.info,v $
+# Revision 1.2  2005/08/10 21:45:55  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.1  2004/10/08 22:56:18  barnes
+# Initial revision
+#
+#
+cnvmaptomap.c 1.02

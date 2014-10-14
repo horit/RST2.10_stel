@@ -1,0 +1,33 @@
+# $Log: version.info,v $
+# Revision 1.9  2007/04/05 18:13:10  code
+# Fixed meaningless use of an expression.
+#
+# Revision 1.8  2007/03/09 14:16:13  code
+# Fixed search.
+#
+# Revision 1.7  2006/08/29 15:49:04  code
+# Removed debugging code.
+#
+# Revision 1.6  2006/08/29 15:46:07  code
+# Fixed bug in decoding scalars.
+#
+# Revision 1.5  2005/01/13 14:54:10  barnes
+# Fixed data types.
+#
+# Revision 1.4  2004/10/12 23:21:07  barnes
+# Added search and index functions.
+#
+# Revision 1.3  2004/10/12 22:28:48  barnes
+# Fixed missing strings.
+#
+# Revision 1.2  2004/10/12 21:45:00  barnes
+# Moved to the DataMap format.
+#
+# Revision 1.1  2004/08/20 13:35:58  barnes
+# Initial revision
+#
+#
+readmap.c 1.05
+writemap.c 1.03
+mapseek.c 1.04
+mapinx.c 1.02

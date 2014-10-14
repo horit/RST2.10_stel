@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>sgp4</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<function>
+<name>SGP4Calculate</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>int SGP4Calculate(double tsince,<sn href="structSGP4.html">struct SGP4</sn> *SGP4,<sn href="structSGP4TLE.html">struct SGP4TLE</sn> *TLE,<sn href="structSGP4XYZVector.html">struct SGP4XYZVector</sn> *pos,struct <sn href="structSGP4XYZVector.html">SGP4XYZVector</sn> *vel);</syntax>
+<description><p>The <fn href="SGP4Calculate.html">SGP4Calculate</fn> function determines the position of a spacecraft from its Two Line Element set and a given time.</p>
+<p>The time in julian seconds since the two line element set was defined is given by the argument <ar>tsince</ar>.</p>
+<p>The SGP4 control structure is pointed to by the argument <ar>SGP4</ar> and the two line element data structure is pointed to by the argument <ar>TLE</ar></p>. 
+<p>The calculated cartesian position and velocity are stored in the structures pointed to by the arguments <ar>pos</ar> and <ar>vel</ar>.</p>
+
+</description>
+<returns>Returns the zero on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4Calculate.c</example>
+
+</function>
+
+<function>
+<name>SGP4DecodeTLE</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>int SGP4DecodeTLE(char *txt[2],<sn href="structSGP4TLE.html">struct SGP4TLE</sn> *TLE);</syntax>
+<description><p>The <fn href="SGP4DecodeTLE.html">SGP4DecodeTLE</fn> function decodes a Two Line Element set from two ASCII strings.</p>
+<p>The two line element is taken from the two zero terminated strings pointed to by the argument <ar>txt</ar>.</p>
+<p>The decoded two line element is stored in the structure pointed to by the argument <ar>TLE</ar>.</p>
+</description>
+<returns>Returns the zero on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4DecodeTLE.c</example>
+
+</function>
+
+
+<function>
+<name>SGP4EpochToJdoy</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>double SGP4EpochToJdoy(double tval);</syntax>
+<description><p>The <fn href="SGP4EpochToJdoy.html">SGP4EpochToJdoy</fn> function converts from the number of seconds from 0:00UT January 1, 1970, to Julian decimal day.</p>
+<p>The time to convert is given by the argument <ar>tval</ar>.</p>
+</description>
+<returns>Returns the Julian decimal date on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4EpochToJdoy.c</example>
+
+
+</function>
+
+<function>
+<name>SGP4EpochToTsince</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>double SGP4EpochToTsince(double tval,<sn href="structSGP4TLE.html">struct SGP4TLE</sn> *TLE);</syntax>
+<description><p>The <fn href="SGP4EpochToTsince.html">SGP4EpochToTsince</fn> function converts from the number of seconds from 0:00UT January 1, 1970, to the time in Julian seconds that has expired the Two Line Element set was defined.</p>
+<p>The time to convert is given by the argument <ar>tval</ar> and the two-line element is stored in the structure pointed to by the argument <ar>TLE</ar>.</p>
+</description>
+<returns>Returns the expired seconds on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4EpochToTsince.c</example>
+
+
+</function>
+
+
+<function>
+<name>SGP4GeodeticPosition</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>int SGP4GeodeticPosition(double jdoy,<sn href="structSGP4XYZVector.html">struct SGP4XYZVector</sn> *pos,<sn href="structSGP4Geodetic.html">struct SGP4Geodetic</sn> *geo);</syntax>
+<description><p>The <fn href="SGP4GeodeticPosition.html">SGP4GeodeticPosition</fn> function converts a spacecraft position from cartestion to geographic coordinates.</p>
+<p>The time expressed as julian decimal day is given by the argument <ar>jdoy</ar> and the cartesian coordinates of the spacecraft are stored in the structure pointed to by the argument <ar>pos</ar>.</p>
+<p>The geodetic position is stored in the structure pointed to by the argument <ar>geo</ar>.</p>
+</description>
+<returns>Returns the zero on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4GeodeticPosition.c</example>
+
+
+</function>
+
+
+<function>
+<name>SGP4Setup</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>int SGP4Setup(<sn href=SGP4.html">struct SGP4</sn> *SGP4,<sn href="structSGP4TLE.html">struct SGP4TLE</sn> *TLE);</syntax>
+<description><p>The <fn href="SGP4Setup.html">SGP4Setup</fn> function initializes the SGP4 model for use.</p>
+<p>The SGP4 global data is stored in the control structure pointed to by the argument <ar>SGP4</ar>.</p>
+<p>The associated two line element data is taken from the structure pointed to by the argument <ar>TLE</ar>.</p> 
+</description>
+<returns>Returns the zero on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4Setup.c</example>
+
+
+</function>
+
+
+<function>
+<name>SGP4TLEToJulian</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>double SGP4TLEToJulian(<sn href="structSGP4TLE.html">struct SGP4TLE</sn> *TLE);</syntax>
+<description><p>The <fn href="SGP4TLEToJulian.html">SGP4TLEToJulian</fn> function calculates the Julian decimal date that the Two Line Element set was defined.</p></description>
+<p>The data structure containing the two-line element data is pointed to by the argument <ar>tle</ar>.</p>
+<returns>Returns the Julian decimal date on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4TLEToJulian.c</example>
+
+
+</function>
+
+
+
+<function>
+<name>SGP4YMDHMSToJdoy</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>double SGP4YMDHMSToJdoy(int yr,int mo,int dy,int hr,int mt,double sc);</syntax>
+<description><p>The <fn href="SGP4YMDHMSToJdoy.html">SGP4YMDHMSToJdoy</fn> function converts from year, month, day, hour, minute and second, to Julian decimal day.</p>
+<p>The time to convert is given by the arguments <ar>yr</ar>, <ar>mo</ar>, <ar>dy</ar>, <ar>hr</ar>, <ar>mt</ar>, <ar>sc</ar>.</p>
+</description>
+<returns>Returns the Julian decimal date on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4YMDHMSToJdoy.c</example>
+
+</function>
+
+<function>
+<name>SGP4YMDHMSToTsince</name>
+<location>src.lib/analysis/sgp4/sgp4</location>
+<header>analysis/sgp4.h</header>
+<syntax>double SGP4YMDHMSToTsince(int yr,int mo,int dy,int hr,int mt,double sc,<sn href="structSGP4TLE.html">struct SGP4TLE</sn> *TLE);</syntax>
+<description><p>The <fn href="SGP4YMDHMSToTsince.html">SGP4YMDHMSToTsince</fn> function converts from year, month, day, hour, minute and second, to the time in Julian seconds that has expired the Two Line Element set was defined.</p>
+<p>The time to convert is given by the arguments <ar>yr</ar>, <ar>mo</ar>, <ar>dy</ar>, <ar>hr</ar>, <ar>mt</ar>, <ar>sc</ar>.</p>
+<p>The two line element data is taken from the structure pointed to by the argument <ar>tle</ar>.</p>
+</description>
+<returns>Returns the expired seconds on success. On error, a (-1) is returned.</returns>
+<errors>On error, a (-1) is returned.</errors>
+<example type="source">SGP4YMDHMSToTsince.c</example>
+
+
+</function>
+
+
+<structure>
+ <name>SGP4</name>
+ <location>src.lib/analysis/sgp4/sgp4</location>
+ <header>analysis/sgp4.h</header>
+ <struct>
+    <member>
+      <code>double aodp;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double aycof;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double c1;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double c4;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double c5;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double cosio;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double d2;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double d3;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double d4;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double delmo;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double omgcof;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double eta;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double omgdot;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double sinio;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double xnodp;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double sinmo;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double t2cof;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double t3cof;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double t4cof;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double t5cof;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+   <member>
+      <code>double x1mth2;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double x3thm1;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double x7thm1;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double xmcof;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double xmdot;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double xnodcf;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double xnodot;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>double xlcof;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+    <member>
+      <code>int simple;</code>
+      <description>SGP4 internal variable.</description>
+    </member>
+ </struct>
+
+<description>
+<p>The <sn href="structstructSGP4.html">struct SGP4</sn> structure stores global parameters used internally by the SGP4 model.</p>
+</description>
+
+</structure>
+
+
+<structure>
+ <name>SGP4Geodetic</name>
+ <location>src.lib/analysis/sgp4/sgp4</location>
+ <header>analysis/sgp4.h</header>
+ <struct>
+    <member>
+      <code>double lat;</code>
+      <description>Geographic latitude.</description>
+    </member>
+    <member>
+      <code>double lon;</code>
+      <description>Geographic longitude.</description>
+    </member>
+    <member>
+      <code>double alt;</code>
+      <description>Altitude.</description>
+    </member>
+    <member>
+      <code>double theta;</code>
+      <description>Theta angle.</description>
+    </member>
+ </struct>
+
+<description>
+<p>The <sn href="structSGP4Geodetic.html">struct SGP4Geodetic</sn> structure stores a geodetic coordinate.</p>
+</description>
+
+</structure>
+
+<structure>
+ <name>SGP4TLE</name>
+ <location>src.lib/analysis/sgp4/sgp4</location>
+ <header>analysis/sgp4.h</header>
+ <struct>
+    <member>
+      <code>double epoch;</code>
+      <description>Epoch.</description>
+    </member>
+    <member>
+      <code>double xndt2o;</code>
+      <description>First time derivative of mean motion.</description>
+    </member>
+    <member>
+      <code>double xndd6o;</code>
+      <description>Second time derivative of mean motion.</description>
+    </member>
+    <member>
+      <code>double bstar;</code>
+      <description>BSTAR drag term.</description>
+    </member>
+    <member>
+      <code>double xincl;</code>
+      <description>Inclination.</description>
+    </member>
+    <member>
+      <code>double xnodeo;</code>
+      <description>Right ascension of the ascending node.</description>
+    </member>
+    <member>
+      <code>double eo;</code>
+      <description>Eccentricity.</description>
+    </member>
+    <member>
+      <code>double omegao;</code>
+      <description>Argument of perigee.</description>
+    </member>
+    <member>
+      <code>double xmo;</code>
+      <description>Mean anomaly.</description>
+    </member>
+    <member>
+      <code>double xno;</code>
+      <description>Mean motion.</description>
+    </member>
+    <member>
+      <code>int catnr;</code>
+      <description>Satellite number.</description>
+    </member>
+    <member>
+      <code>int elset;</code>
+      <description>Element number.</description>
+    </member>
+    <member>
+      <code>int revnum;</code>
+      <description>Revolution number at epoch.</description>
+    </member>
+    <member>
+      <code>char idesg[256];</code>
+      <description>.</description>
+    </member>
+ </struct>
+
+<description>
+<p>The <sn href="structSGP4TLE.html">struct SGP4TLE</sn> structure stores a two line element set.</p>
+</description>
+
+</structure>
+
+
+<structure>
+ <name>SGP4XYZVector</name>
+ <location>src.lib/analysis/sgp4/sgp4</location>
+ <header>analysis/sgp4.h</header>
+ <struct>
+    <member>
+      <code>double x;</code>
+      <description>X coordinate.</description>
+    </member>
+    <member>
+      <code>double y;</code>
+      <description>Y coordinate.</description>
+    </member>
+    <member>
+      <code>double z;</code>
+      <description>Z coordinate.</description>
+    </member>
+ </struct>
+
+<description>
+<p>The <sn href="structSGP4XYZVector.html">struct SGP4XYZVector</sn> structure stores a cartesian coordinate.</p>
+</description>
+
+</structure>
+
+
+
+
+
+
+</library>

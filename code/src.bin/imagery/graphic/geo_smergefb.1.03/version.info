@@ -1,0 +1,16 @@
+# $Log: version.info,v $
+# Revision 1.3  2005/08/11 14:36:55  barnes
+# Added option to dump command line options.
+#
+# Revision 1.2  2004/06/21 22:18:06  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 18:20:49  barnes
+# Initial revision
+#
+#
+clip.c 1.01
+geo_smergefb.c 1.05
+image_table.c 1.01
+key.c 1.03
+map.c 1.03

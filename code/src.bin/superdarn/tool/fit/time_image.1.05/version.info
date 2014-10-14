@@ -1,0 +1,25 @@
+# $Log: version.info,v $
+# Revision 1.5  2005/08/15 21:05:48  barnes
+# Added options for limiting the ranges and for loading a color key.
+#
+# Revision 1.4  2005/08/10 19:07:58  barnes
+# Added option to dump command line options.
+#
+# Revision 1.3  2004/10/28 14:01:46  barnes
+# Added missing header.
+#
+# Revision 1.2  2004/06/21 22:48:04  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 21:58:41  barnes
+# Initial revision
+#
+#
+cfit.c 1.02
+csd.c 1.02
+expr.c 1.03
+fit.c 1.03
+oldfit.c 1.01
+smr.c 1.02
+key.c 1.01
+time_image.c 1.05

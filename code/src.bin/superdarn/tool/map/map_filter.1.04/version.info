@@ -1,0 +1,15 @@
+# $Log: version.info,v $
+# Revision 1.4  2005/08/10 22:40:05  barnes
+# Added option to dump command line options.
+#
+# Revision 1.3  2004/10/12 22:57:50  barnes
+# Moved to DataMap format.
+#
+# Revision 1.2  2004/05/10 21:01:53  barnes
+# Removed redundant code.
+#
+# Revision 1.1  2003/03/13 00:21:34  barnes
+# Initial revision
+#
+#
+map_filter.c 1.05

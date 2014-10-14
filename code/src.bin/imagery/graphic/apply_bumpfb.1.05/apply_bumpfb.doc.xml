@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>apply_bumpfb</name>
+<location>src.bin/imagery/graphic/apply_bumpfb</location>
+<syntax>apply_bumpfp --help</syntax>
+<syntax>apply_bumpfp [<ar>options</ar>] <ar>imgname</ar> <ar>bumpname</ar></syntax>
+<syntax>apply_bumpfp -ppm [<ar>options</ar>] <ar>imgname</ar> <ar>bumpname</ar></syntax>
+<syntax>apply_bumpfp -ppmx [<ar>options</ar>] <ar>imgname</ar> <ar>bumpname</ar></syntax>
+<syntax>apply_bumpfp -xml [<ar>options</ar>] <ar>imgname</ar> <ar>bumpname</ar></syntax>
+<option><on>--help</on><od>print the help message and exit.</od></option>
+<option><on>-ppm</on><od>produce a Portable PixMap (PPM) image as the output.</od></option>
+<option><on>-ppmx</on><od>produce an extended Portable PixMap (PPMX) image as the output.</od></option>
+<option><on>-xml</on><od>produce an XML image representation as the output.</od></option>
+<option><on>-ippm</on><od>input image file is a Portable PixMap (PPM).</od></option>
+<option><on>-ippmx</on><od>input image file is an extended Portable PixMap (PPMX).</od></option>
+<option><on>-ixml </on><od>input image file is an XML image representation.</od></option>
+<option><on>-mask </on><od>generate an alpha channel mask rather than applying the bump-map.</od></option>
+<option><on>-level <ar>level</ar></on><od>threshold the bump-map height at <ar>level</ar>.</od></option>
+<option><on><ar>imgname</ar></on><od>filename of the bitmap image.</od></option>
+<option><on><ar>bumpname</ar></on><od>filename of the bumpmap.</od></option>
+<synopsis><p>Apply a bump-map to a bitmap image.</p></synopsis>
+<description><p>Apply a bump-map to a bitmap image.</p>
+<p>The output can be to a Portable PixMap (PPM) file, extended Portable PixMap (PPMX) file, or XML image representation. The default output is XML. The output file is written to standard output.</p>
+</description>
+<example>
+<command>apply_bumpfb -ippm -ppm image.ppm bumpmap.dat &gt; bump.ppm</command>
+<description>Apply the bumpmap "<code>bumpmap.dat</code>" to the PPM file "<code>image.ppm</code>" and write the resultant bitmap to the file "<code>bump.ppm</code>".</description>
+</example>
+<example type="image">example1</example>
+
+
+</binary>

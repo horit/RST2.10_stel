@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>findmax</name>
+<location>src.bin/imagery/process/findmax</location>
+<syntax>findmax <ar>filename...</ar></syntax>
+<option><on><ar>filename...</ar></on><od>filenames of the SImage files to process.</od>
+</option>
+<synopsis><p>Finds the maximum data value in an SImage file or files.</p></synopsis>
+<description><p>Finds the maximum data value in an SImage file or files.</p>
+<p>The program finds the maximum data value in each SImage file specified on the command line. It is assumed that the data will be noisy so the program prints both the maximum data value and also the average of the top sixteen data values in an attempt to elliminate the noise.</p>
+<p>The calculated valued are written to standard output</p></description>
+<example>
+<command>findmax *.simage &gt; max.txt</command>
+<description>Find the maximum data values of all the SImage files in the current directory and write them to the file "<code>max.txt</code>".</description>
+</example>
+
+</binary>

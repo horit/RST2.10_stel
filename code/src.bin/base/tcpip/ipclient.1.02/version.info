@@ -1,0 +1,8 @@
+# $Log: version.info,v $
+# Revision 1.2  2005/08/05 20:32:30  barnes
+# Added option to dump the command line options
+#
+# Revision 1.1  2003/02/22 23:46:36  barnes
+# Initial revision
+#
+ipclient.c 1.02

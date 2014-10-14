@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>geo_bumpmapfb</name>
+<location>src.bin/imagery/graphic/geo_bumpmapfb</location>
+<syntax>geo_bumpmapfb --help</syntax>
+<syntax>geo_bumpmapfb [<ar>options</ar>] <ar>elvname</ar></syntax>
+<syntax>geo_bumpmapfb -ppm [<ar>options</ar>] <ar>elvname</ar></syntax>
+<syntax>geo_bumpmapfb -ppmx [<ar>options</ar>] <ar>elvname</ar></syntax>
+<syntax>geo_bumpmapfb -xml [<ar>options</ar>] <ar>elvname</ar></syntax>
+
+
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+
+<option><on>-cf <ar>cfname</ar></on><od>read command line options from the file <ar>cfname</ar>.</od>
+</option>
+<option><on>-wdt <ar>width</ar></on><od>set the width of the bump map to <ar>width</ar>.</od>
+</option>
+<option><on>-hgt <ar>height</ar></on><od>set the height of the bump map to <ar>height</ar>.</od>
+</option>
+<option><on>-sf <ar>scale</ar></on><od>set the scale factor (magnification) to <ar>scale</ar>. The default scale factor is 1.</od>
+</option>
+<option><on>-ortho</on><od>use an orthographic projection.</od>
+</option>
+<option><on>-stereo</on><od>use a stereographic projection.</od>
+</option>
+<option><on>-gvp</on><od>use a general vertical projection.</od>
+</option>
+<option><on>-lat <ar>lat</ar></on><od>center the plot on the latitude given by <ar>lat</ar>.</od>
+</option>
+<option><on>-lon <ar>lon</ar></on><od>center the plot on the longitude given by <ar>lon</ar>.</od>
+</option>
+<option><on>-latmin <ar>latmin</ar></on><od>adjust the scale factor so that the lowest visible latitude is  <ar>latmin</ar>. Applies when the stereographic projection is used.</od>
+</option>
+<option><on>-mag</on><od>use magnetic coordinates.</od>
+</option>
+<option><on>-rotate</on><od>rotate the plot so that the local noon is at the top of the plot.</od>
+</option>
+<option><on>-flip</on><od>flip the direction of the X-axis.</od>
+</option>
+<option><on>-square</on><od>force the use of a square bounding box around the plot.</od>
+</option>
+<option><on>-lst</on><od>use local solar time rather than local time.</od>
+</option>
+
+<option><on>-d <ar>yyyymmdd</ar></on><od>plot for the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-t <ar>hr:mn</ar></on><od>plot for the time <ar>hr:mn</ar>.</od>
+</option>
+
+
+<option><on>-key <ar>keyname</ar></on><od>load the color bar from the file <ar>vkeyname</ar>.</od>
+</option>
+
+
+<option><on>-min <ar>min</ar></on><od>set the minium value of the elevation scale to <ar>min</ar>.</od>
+</option>
+
+<option><on>-max <ar>max</ar></on><od>set the maximum value of the elevation scale to <ar>max</ar>.</od>
+</option>
+
+
+<option><on>-log</on><od>use a logarithmic scale.</od>
+</option>
+
+
+
+<option><on>-stretch</on><od>Use the full range of the color bar. By default the the color bar ranges from zero to the maximum elevation.</od>
+</option>
+
+<option><on>-smooth</on><od>Apply a simple linear interpolation to smooth the elevation data. This is useful when the plot covers a small area of the globe.</od>
+</option>
+
+<option><on>-phong</on><od>Apply a Phong illumination model to shade the elevation map.</od>
+</option>
+
+<option><on>-bc <ar>bc</ar></on><od>set the scaling of of the ambient component of the Phong model to <ar>ka</ar>.</od>
+</option>
+
+<option><on>-ds <ar>ds</ar></on><od>set the scaling of the diffuse component of the Phong model to <ar>kd</ar>.</od>
+</option>
+
+<option><on>-ss <ar>ss</ar></on><od>set the scaling of the specular component of the Phong model to <ar>ks</ar>.</od>
+</option>
+
+<option><on>-name <ar>name</ar></on><od>assign the name <ar>name</ar> to the bitmap. This is used by those image formats that support named images (PPMX,XML).</od>
+</option>
+
+<option><on><ar>elvname</ar></on><od>filename of the elevation data.</od></option>
+<option><on>-ppm</on><od>produce a Portable PixMap (PPM) image as the output.</od>
+</option>
+<option><on>-ppmx</on><od>produce an extended Portable PixMap (PPMX) image as the output.</od>
+</option>
+<option><on>-xml</on><od>produce an XML image representation as the output.</od>
+</option>
+
+<synopsis><p>Generate a bitmap image from elevation data.</p></synopsis>
+
+<description><p>Generate a bitmap image from elevation data.</p>
+<p>This program produces a plot of elevation data in the form of a bitmap image. The command line options define the plot size and map projection to use for the bitmap.</p>
+
+<p>If the "<code>-phong</code>" option is used then a simple Phong illumination model is used to texture that plot.</p> 
+</description>
+
+<example><command>geo_bumpmapfb -lon 180 -key rainbow.key -min 0 -ppm -log -wdt 540 -hgt 240 topo.elv.dat &gt; bump.ppm</command>
+<description>Plot the elevation data using a logarithmic scale and the color bar "<code>rainbow.key</code>". Write the Portable PixMap (PPM) output to the file "<code>bump.ppm</code>".</description>
+</example>           
+
+<example type="image">example1</example>
+
+
+<example><command>geo_bumpmapfb -lat 60 -lon 30 -phong -ortho -key ~/key/rainbow.key -min 0 -ppm -log -wdt 540 -hgt 540 &gt; bump.ppm</command>
+<description>Plot the elevation data using a logarithmic scale and the color bar "<code>rainbow.key</code>". Use phong shading to texture the globe. Write the Portable PixMap (PPM) output to the file "<code>bump.ppm</code>".</description>
+</example>           
+
+<example type="image">example2</example>
+
+
+
+
+
+
+</binary>

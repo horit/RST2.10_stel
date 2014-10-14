@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>rtcsd</name>
+<location>src.bin/superdarn/tool/csd/rtcsd</location>
+<syntax>rtcsd --help</syntax>
+<syntax>rtcsd [-vb] [-t <ar>minpwr</ar>] [-b <ar>bmnum</ar>] [-a] [-pwr pmax] [-vel vmax] [-wdt wmax] [-m <ar>bufsze</ar>] [-r <ar>repeat</ar>] [-tl <ar>tlen</ar>] [-nd] [-s <ar>stream</ar>] [-L <ar>logname</ar>] [-p <ar>pathname</ar>] [-f <ar>filename</ar>] [-if <ar>pidname</ar>] [-s <ar> stream</ar>] <ar>host</ar> <ar>port</ar></syntax>
+<syntax>rtcsd -rpf [-vb] [-t <ar>minpwr</ar>] [-b <ar>bmnum</ar>] [-a] [-pwr pmax] [-vel vmax] [-wdt wmax] [-m <ar>bufsze</ar>] [-r <ar>repeat</ar>] [-tl <ar>tlen</ar>] [-nd] [-L <ar>logname</ar>] [-p <ar>pathname</ar>] [-f <ar>filename</ar>] [-if <ar>pidname</ar>] [-s <ar> stream</ar>] <ar>host</ar> <ar>portname</ar></syntax>
+
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+<option><on>-vb</on><od>verbose. Log information to the console.</od>
+</option>
+<option><on>-t <ar>minpwr</ar></on><od>filter out data with values of lag-zero power less than <ar>minpwr</ar>.</od>
+</option>
+<option><on>-b <ar>bmnum</ar></on><od>store data from the beam <ar>bmnum</ar> only.</od>
+</option>
+<option><on>-a</on><od>store the lambda power, velocity and lambda spectral width.</od>
+</option>
+<option><on>-pwr <ar>pmax</ar></on><od>store lambda power and set the maximum of the power scale to <ar>pmax</ar>.</od>
+</option>
+<option><on>-vel <ar>vmax</ar></on><od>store velocity and set the maximum of the velocity scale to +<ar>vmax</ar> and the minimum to -<ar>vmin</ar>.</od>
+</option>
+<option><on>-wdt <ar>wmax</ar></on><od>store lambda spectral width and set the maximum of the spectral width scale to <ar>wmax</ar>.</od>
+</option>
+
+
+<option><on>-m <ar>bufsze</ar></on><od>use a memory buffer of <ar>bufsze</ar> bytes.</od>
+</option>
+
+
+
+<option><on>-r <ar>repeat</ar></on><od>instead of writing the buffer at the end of each scan, write the buffer after <ar>repeat</ar> packets are received.</od>
+</option>
+
+
+<option><on>-tl <ar>hr:mn</ar></on><od>buffer <ar>hr:mn</ar> hours of data.</od>
+</option>
+
+<option><on>-nd</on><od>do not create daily files.</od>
+</option>
+
+
+
+<option><on>-L <ar>logname</ar></on><od>log connections and information in the file <ar>logname</ar>. By default, connections are recorded in <code>log.rt</code>.</od>
+</option>
+
+<option><on>-p <ar>pathname</ar></on><od>store the daily files in the directory <ar>pathname</ar>.</od>
+</option>
+
+<option><on>-f <ar>filename</ar></on><od>store the buffered data in the file <ar>filename</ar>.</od>
+</option>
+
+<option><on>-if <ar>pidname</ar></on><od>record the process Identifier (PID) of the server in the file <ar>pidname</ar>. By default, the PID is  recorded in <code>pid.id</code>.</od>
+</option>
+
+<option><on>-s <ar>stream</ar></on><od>for a multiplexed stream, read the stream number given by <ar>stream</ar>. A value of 255 will read all streams</od>
+</option>
+
+<option><on><ar>host</ar></on><od>hostname or IP number of the system to connect to.</od></option>
+<option><on><ar>rport</ar></on><od>port number to connect to on the server.</od></option>
+
+<option><on>-rpf</on><od>The remote port number is stored in a text file.</od>
+</option>
+<option><on><ar>rportname</ar></on><od>filename of the text file containing the remote port number.</od></option>
+
+
+
+<synopsis><p>Creates a <code>csd</code> format file from a <code>fitacf</code> TCP/IP data stream.</p></synopsis>
+
+
+<description><p>Creates a <code>csd</code> format file from a <code>fitacf</code> TCP/IP data stream.</p>
+<p>Data is received from the remote site and processed to produce a <code>csd</code> file record. This is added to a fixed length memory buffer that stores the preceding few hours of data as specified by the "<code>-tl</code>" option. At the end of a scan, or after the number of beams specified by the "<code>-r</code>" option are received, the memory buffer is written to the output file. 
+In addition a file containing the data for the entire day is written to a file called "<code><em>yyyymmdd.iii</em>.csd</code>", where <em>yyyy</em> is the year, <em>mm</em> is the month, <em>dd</em> is the day, and <em>iii</em> is the radar identifier code. This daily file can be disabled using  the "<code>-nd</code>" option.</p>
+<p>The "<code>-b</code>" option can be used to specify a single beam to store in the file; the default operation is to store information about all beams.</p>
+</description>
+
+<example>
+<command>rtcsd -L log -if pid.id -a kapqnx.jhuapl.edu 1024</command>
+<description>Generates a <code>csd</code> format file from the host "<code>kapqnx.jhuapl.edu</code>", served at port 1024. All beams and parameters are recorded. The process identifier is recorded in the file "<code>pid.id</code>", and logs of all transactions are recorded in the file "<code>log.<em>yyyymmdd</em></code>" where <em>yyyy</em> is the year, <em>mm</em> is the month, and <em>dd</em> is the day.</description>
+</example>
+<example><command>make_cmprt -L log -if pid.id  -r 1 -f rt.cmp.kap -a -b 8 -nd -rpf port.kap kapqnx.jhuapl.edu</command> 
+<description>Generates a <code>csd</code> format file from the host "<code>kapqnx.jhuapl.edu</code>", served at port contained in the file "<code>port.kap</code>". All parameters are stored but only beam 8 is recorded. No daily file is created and the memory buffer is written after every beam to the file "<code>rt.cmp.kap</code>".  The process identifier is recorded in the file "<code>pid.id</code>", and logs of all transactions are recorded in the file "<code>log.<em>yyyymmdd</em></code>" where <em>yyyy</em> is the year, <em>mm</em> is the month, and <em>dd</em> is the day.</description>
+</example>
+</binary>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>fovp</name>
+<location>src.bin/superdarn/util/fovp</location>
+<syntax>fovp --help</syntax>
+<syntax>fovp [<ar>options</ar>] [<ar>stations...</ar>]
+</syntax>
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+
+<option><on>-cf <ar>cfname</ar></on><od>read command line options from the file <ar>cfname</ar>.</od>
+</option>
+<option><on>-wdt <ar>width</ar></on><od>set the width of the plot to <ar>width</ar>.</od>
+</option>
+<option><on>-hgt <ar>height</ar></on><od>set the height of the plot to <ar>height</ar>.</od>
+</option>
+<option><on>-sf <ar>scale</ar></on><od>set the scale factor (magnification) to <ar>scale</ar>. The default scale factor is 1.</od>
+</option>
+<option><on>-ortho</on><od>use an orthographic projection.</od>
+</option>
+<option><on>-stereo</on><od>use a stereographic projection.</od>
+</option>
+<option><on>-gvp</on><od>use a general vertical projection.</od>
+</option>
+<option><on>-lat <ar>lat</ar></on><od>center the plot on the latitude given by <ar>lat</ar>.</od>
+</option>
+<option><on>-lon <ar>lon</ar></on><od>center the plot on the longitude given by <ar>lon</ar>.</od>
+</option>
+
+<option><on>-alt <ar>alt</ar></on><od>calculate the radar field of view assuming an altitude of <ar>alt</ar> kilometers.</od>
+</option>
+
+<option><on>-latmin <ar>latmin</ar></on><od>adjust the scale factor so that the lowest visible latitude is  <ar>latmin</ar>. Applies when the stereographic projection is used.</od>
+
+
+
+</option>
+<option><on>-mag</on><od>use magnetic coordinates.</od>
+</option>
+<option><on>-rotate</on><od>rotate the plot so that the local noon is at the top of the plot.</od>
+</option>
+<option><on>-flip</on><od>flip the direction of the X-axis.</od>
+</option>
+<option><on>-square</on><od>force the use of a square bounding box around the plot.</od>
+</option>
+<option><on>-fov</on><od>plot the radar field of view.</od>
+</option>
+<option><on>-ffov</on><od>plot the filled radar field of view.</od>
+</option>
+<option><on>-lst</on><od>use local solar time rather than local time.</od>
+</option>
+<option><on>-lnewdt <ar>lnewdt</ar></on><od>set the line width to <ar>lnewdt</ar>.</od>
+</option>
+
+<option><on>-fovcol <ar>rrggbb</ar></on><od>set the color of the field of view outline to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-ffovcol <ar>rrggbb</ar></on><od>set the color of the filled field of view to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-d <ar>yyyymmdd</ar></on><od>plot for the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-t <ar>hr:mn</ar></on><od>plot for the time <ar>hr:mn</ar>.</od>
+</option>
+
+<option><on>-frang <ar>frang</ar></on><od>set the distance to the first range to <ar>frang</ar> kilometers. The default is 180.</od>
+</option>
+
+<option><on>-rsep <ar>rsep</ar></on><od>set the range separation to <ar>frang</ar> kilometers. The default is 45.</od>
+</option>
+
+<option><on>-nrang <ar>nrang</ar></on><od>set the number of ranges to <ar>nrang</ar> kilometers. The default is taken from the hardware description file for the site and is usually 75.</od>
+</option>
+
+<option><on>-st <ar>stid</ar></on><od>comma separated list of station identifier codes of the radars whose field of view is to be plotted.</od>
+</option>
+
+<option><on><ar>stations...</ar></on><od>space separated list of station identifier numbers of the radars whose field of view is to be plotted.</od>
+</option>
+
+<synopsis><p>Plot the radar fields of view using rPlot.</p></synopsis>
+
+<description><p>Plot the radar fields of view using rPlot.</p>
+<p>The task only plots what it is instructed to plot on the command line which means that at least some of the options must be included if the plot is to show anything.</p>
+<p>The default map projection is a simple cylindrical projection, the most useful projection is the stereographic projection invoked using the "<code>-stereo</code>" option.</p>
+<p>The date and time options allow a plot for a specific time to be generated this is most useful when used in conjunction with the "<code>-rotate</code>" option or the "<code>-term</code>" and "<code>-fterm</code>" options.</p>
+<p>The number and complexity of the command line options makes typing them a laborious process, especially when producing multiple plots. To solve this problem, command line options can be placed in plain text file that can be parsed by the program using the " <code>-cf</code>" option. This allows the user to create a set of configuration files for producing different plots.</p> 
+</description>
+
+<example>
+<command>fovp -stereo -mag -fov -ffov-st gbr,kap,sas &gt; fov.rp.xml</command>
+<description>Generate an rXML plot of the Goose Bay, Kapuskasing and Saskatoon fields of view in magnetic coordinates using a stereographic projection.The plot is stored in the file "<code>fov.rp.xml</code>".</description>
+</example>
+<example type="rplot">example1</example>
+
+
+<example>
+<command>fovp -d 20040505 -t 6:00 -ortho -rotate -fov -ffov -ffovcol 008000 -st kod &gt; fov.rp.xml</command>
+<description>Generate an rXML plot of the Kodiak field of view in magnetic coordinates using an orthographic projection. Rotate the image so that magnetic local noon is at the top for the time May 5, 2004 at 06:00 UTC. The plot is stored in the file "sas.rp.xml".</description>
+</example>
+<example type="rplot">example2</example>
+
+
+
+
+</binary>

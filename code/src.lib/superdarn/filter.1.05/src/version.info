@@ -1,0 +1,20 @@
+# $Log: version.info,v $
+# Revision 1.5  2006/03/14 23:00:15  barnes
+# Fixed bug in undercounting the number of beams.
+#
+# Revision 1.4  2006/03/14 22:12:32  barnes
+# Modification to deal with radars with extra beams.
+#
+# Revision 1.3  2004/07/13 22:34:28  barnes
+# Removed redundant headers.
+#
+# Revision 1.2  2004/05/04 18:24:52  barnes
+# Renamed the type header to avoid confusion.
+#
+# Revision 1.1  2004/04/26 18:00:11  barnes
+# Initial revision
+#
+#
+bound.c 1.03
+checkops.c 1.03
+filter.c 1.06

@@ -1,0 +1,12 @@
+# $Log: version.info,v $
+# Revision 1.3  2005/08/05 20:25:42  barnes
+# Added option to dump the command line options
+#
+# Revision 1.2  2004/06/21 21:14:35  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 18:38:15  barnes
+# Initial revision
+#
+#
+ppmtoxml.c 1.05

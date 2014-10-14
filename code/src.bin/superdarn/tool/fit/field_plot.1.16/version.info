@@ -1,0 +1,65 @@
+# $Log: version.info,v $
+# Revision 1.16  2006/03/14 22:02:31  barnes
+# Fixed debugging code.
+#
+# Revision 1.15  2006/03/14 21:02:46  barnes
+# Modification to deal with radars with more than sixteen beams.
+#
+# Revision 1.14  2006/02/21 19:45:26  barnes
+# Fixed bug in plotting the outline.
+#
+# Revision 1.13  2005/09/09 16:08:06  barnes
+# The maximum range gate is now taken from the hardware table.
+#
+# Revision 1.12  2005/08/15 21:46:19  barnes
+# Fixed missing option.
+#
+# Revision 1.11  2005/08/10 18:26:48  barnes
+# Added option to dump out command line options.
+#
+# Revision 1.10  2005/07/13 19:24:40  barnes
+# Fixed bug in non-X version of the display.
+#
+# Revision 1.9  2005/06/24 14:42:00  barnes
+# Fixed bug in panel plots.
+#
+# Revision 1.8  2004/11/24 23:35:18  barnes
+# Bug fix to channel number.
+#
+# Revision 1.7  2004/11/23 23:10:18  barnes
+# Fixed arguments.
+#
+# Revision 1.6  2004/10/28 13:57:28  barnes
+# Added missing header.
+#
+# Revision 1.5  2004/08/25 21:40:37  barnes
+# Fixes for MacOS 10 (Darwin)
+#
+# Revision 1.4  2004/06/21 22:42:40  barnes
+# Added missing header.
+#
+# Revision 1.3  2004/05/18 22:36:07  barnes
+# Fixed bug in assigning a command line argument.
+#
+# Revision 1.2  2004/05/18 18:13:27  barnes
+# Added support for plotting velocity vectors.
+#
+# Revision 1.1  2004/05/10 21:55:26  barnes
+# Initial revision
+#
+# 
+field_plot.c 1.13
+geobeam.c 1.01
+key.c 1.02
+make_fov.c 1.04
+make_grid.c 1.01
+plot_cell.c 1.02
+plot_logo.c 1.02
+plot_source.c 1.02
+plot_time.c 1.03
+plot_time_label.c 1.02
+text_box.c 1.01
+plot_refvec.c 1.01
+plot_vec.c 1.02
+plot_outline.c 1.03
+expr.c 1.02

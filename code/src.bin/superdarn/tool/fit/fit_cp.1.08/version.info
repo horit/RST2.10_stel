@@ -1,0 +1,27 @@
+# $Log: version.info,v $
+# Revision 1.8  2007/02/22 16:48:58  code
+# Fixed bug in reading old file formats.
+#
+# Revision 1.7  2007/02/09 18:14:37  code
+# Fixed missing switch for old and new file formats.
+#
+# Revision 1.6  2006/09/15 19:28:20  code
+# Fixed unitialized variable.
+#
+# Revision 1.5  2005/08/10 18:31:48  barnes
+# Added option to dump out command line options.
+#
+# Revision 1.4  2004/10/28 13:58:50  barnes
+# Added missing header.
+#
+# Revision 1.3  2004/05/10 21:36:00  barnes
+# Removed redundant code.
+#
+# Revision 1.2  2003/02/25 21:28:14  barnes
+# Modification to use the base libraries.
+#
+# Revision 1.1  2002/07/18 15:16:49  barnes
+# Initial revision
+#
+#
+fit_cp.c 1.09

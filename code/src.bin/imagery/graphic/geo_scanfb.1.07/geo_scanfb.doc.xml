@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>geo_scanfb</name>
+<location>src.bin/imagery/graphic/geo_scanfb</location>
+<syntax>geo_scanfb --help</syntax>
+<syntax>geo_scanfb [<ar>options</ar>] <ar>filename</ar></syntax>
+<syntax>geo_scanfb -ppm [<ar>options</ar>] <ar>filename</ar></syntax>
+<syntax>geo_scanfb -ppmx [<ar>options</ar>] <ar>filename</ar></syntax>
+<syntax>geo_scanfb -xml [<ar>options</ar>] <ar>filename</ar></syntax>
+
+
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+
+<option><on>-cf <ar>cfname</ar></on><od>read command line options from the file <ar>cfname</ar>.</od>
+</option>
+<option><on>-wdt <ar>width</ar></on><od>set the width of the plot to <ar>width</ar>.</od>
+</option>
+<option><on>-hgt <ar>height</ar></on><od>set the height of the plot to <ar>height</ar>.</od>
+</option>
+<option><on>-sf <ar>scale</ar></on><od>set the scale factor (magnification) to <ar>scale</ar>. The default scale factor is 1.</od>
+</option>
+<option><on>-ortho</on><od>use an orthographic projection.</od>
+</option>
+<option><on>-stereo</on><od>use a stereographic projection.</od>
+</option>x
+<option><on>-gvp</on><od>use a general vertical projection.</od>
+</option>
+<option><on>-lat <ar>lat</ar></on><od>center the plot on the latitude given by <ar>lat</ar>.</od>
+</option>
+<option><on>-lon <ar>lon</ar></on><od>center the plot on the longitude given by <ar>lon</ar>.</od>
+</option>
+<option><on>-latmin <ar>latmin</ar></on><od>adjust the scale factor so that the lowest visible latitude is  <ar>latmin</ar>. Applies when the stereographic projection is used.</od>
+</option>
+<option><on>-mag</on><od>use magnetic coordinates.</od>
+</option>
+<option><on>-rotate</on><od>rotate the plot so that the local noon is at the top of the plot.</od>
+</option>
+<option><on>-flip</on><od>flip the direction of the X-axis.</od>
+</option>
+<option><on>-square</on><od>force the use of a square bounding box around the plot.</od>
+</option>
+<option><on>-lst</on><od>use local solar time rather than local time.</od>
+</option>
+<option><on>-tf <ar>factor</ar></on><od>Set the transparency factor to <ar>factor</ar>. The transparency factor controls how the alpha channel of the image. A ratio is calculated using the equation (1-<ar>factor</ar>)+<ar>c</ar>*<ar>factor</ar>, where <ar>c</ar> is the intensity of the pixel in the satellite image. This ratio is then used to calculate the alpha channel component of the pixel.</od>
+</option>
+
+
+
+
+<option><on>-d <ar>yyyymmdd</ar></on><od>plot up to the scan with the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-t <ar>hr:mn</ar></on><od>plot up to the scan with the time <ar>hr:mn</ar>.</od>
+</option>
+
+<option><on>-ex <ar>hr:mn</ar></on><od>plot scans up to the time <ar>hr:mn</ar> prior to end scan.</od>
+</option>
+
+
+<option><on>-pd <ar>yyyymmdd</ar></on><od>plot the position of the earth at the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-pt <ar>hr:mn</ar></on><od>plot the position of the earth at time <ar>hr:mn</ar>.</od>
+</option>
+
+
+<option><on>-fade <ar>fade</ar></on><od>set the fade factor to <ar>fade</ar>. The pixels are multiplies by <ar>fade</ar> after each scan is plotted so that the scans can be made to slowly fade into the background.</od>
+</option>
+
+<option><on>-d <ar>yyyymmdd</ar></on><od>plot for the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-t <ar>hr:mn</ar></on><od>plot for the time <ar>hr:mn</ar>.</od>
+</option>
+
+
+<option><on>-inx <ar>color</ar></on><od>for a multi-color image, plot the color channel <ar>color</ar>.</od>
+</option>
+
+<option><on>-key <ar>keyname</ar></on><od>load the color bar from the file <ar>vkeyname</ar>.</od>
+</option>
+
+<option><on>-min <ar>min</ar></on><od>set the minium value of the intensity scale to <ar>min</ar>.</od>
+</option>
+
+<option><on>-max <ar>max</ar></on><od>set the maximum value of the intensity scale to <ar>max</ar>.</od>
+</option>
+
+<option><on>-log</on><od>use a logarithmic scale.</od>
+</option>
+
+
+<option><on>-name <ar>name</ar></on><od>assign the name <ar>name</ar> to the bitmap. This is used by those image formats that support named images (PPMX,XML).</od>
+</option>
+
+<option><on>-stretch</on><od>Use the full range of the color bar. By default the the color bar ranges from zero to the maximum intensity.</od>
+</option>
+
+<option><on>-ppm</on><od>produce a Portable PixMap (PPM) image as the output.</od>
+</option>
+<option><on>-ppmx</on><od>produce an extended Portable PixMap (PPMX) image as the output.</od>
+</option>
+<option><on>-xml</on><od>produce an XML image representation as the output.</od>
+</option>
+
+<option><on><ar>filename</ar></on><od>filename of the sImage file</od></option>
+
+
+<synopsis><p>Plot an image from an sImage file containing scan orientated data.</p></synopsis>
+
+<description><p>Plot an image from an sImage file containing scan orientated data.</p>
+<p>Scan orientated sImage data consists of multiple images taken by some type of scanning instrument, for example the GUVI instrument on the TIMED spacecraft. The program is designed to plot multiple scans to build up an image.</p>
+<p>Two different times can be specified on the command line, the time specified by the "<code>-d</code>" and "<code>-t</code>" options gives the time of the scan within the file to stop plotting. If the options are omitted then the last scan in the file is used. The second time, specified by the "<code>-pd</code>" and "<code>-pt</code>" options, defines the time to use for the plot. This option effects how the plot is orientated.</p>
+<p>The number of scans plotted is controlled using the "<code>-ex</code>" option this give the extent in hours and minutes of scans to plot prior to the last one. If this option is omitted then all scans in the file are plotted.</p>
+<p>The "<code>-fade</code>" option controls how the scans "fade" over time.As each scan is plotted the pixel intensities are multiplied by the fade value to slowly dim them into the background.</p>
+
+<p>The output can be to an X terminal, XML rplot file, Portable PixMap (PPM) file, extended Portable PixMap (PPMX) file, or PostScript file. The default output is XML.</p>
+
+<p>The default map projection is a simple cylindrical projection, the most useful projection is the stereographic projection invoked using the "<code>-stereo</code>" option.</p>
+
+<p>The number and complexity of the command line options makes typing them a laborious process, especially when producing multiple plots. To solve this problem, command line options can be placed in plain text file that can be parsed by the program using the " <code>-cf</code>" option. This allows the user to create a set of configuration files for producing different plots.</p> 
+
+
+</description>
+
+<example>
+<command>geo_scanfb -rotate -mag -stereo -lat 90 -lon 0 -t 23:00 -max 3000 -ppm -key rainbow.key guvi.sdat &gt; guvi.ppm</command> 
+<description>Plot the data from the file "<code>guvi.sdat</code>" up to 23:00UT using a stereographic projection. Use magnetic coordinates and rotate the plot so that magnetic local noon is at the top.</description>
+</example>
+<example type="image">example1</example>
+
+
+
+</binary>

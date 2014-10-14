@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>rnnet</name>
+<location>src.lib/general/nnet</location>
+<function>
+<name>NNetActvCode</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>int NNetActvCode(float (*actv)(float));</syntax>
+<description><p>The <fn href="NNetActvCode.html">NNetActvCode</fn> returns a code number to associate with one of the activation functions included in the library.</p> 
+<p>The argument actv is a pointer to a function of the form:</p>
+<fd>float actv (float x);</fd>
+<p>The function should return the activation level for each node of the network from the sum of its inputs and threshold given by the argument <ar>x</ar>.</p>
+</description>
+<returns>Returns a code number to associate with an activation function or zero if it is not recognized.</returns>
+<example type="source">NNetActvCode.c</example>
+</function>
+<function>
+<name>NNetBackward</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>void NNetBackward(<sn href="structNNet.html">struct NNet</sn> *ptr,float *target,float b,float m,int mode);</syntax>
+<description><p>The <fn href="NNetBackward.html">NNetBackward</fn> performs backward propagation, or training of a neural network.</p>
+<p>The argument <ar>ptr</ar>  points to the network to train. The argument <ar>tgt</ar> is a pointer to an array of desired target values for the output nodes of the network. The argument <ar>b</ar> defines the learning rate of the network and the argument <ar>m</ar> defines the momentum factor associated with the learning process.</p> 
+<p>The final argument <ar>mode</ar>, controls the operation of the algorithm; a value of (1) will update the calculated change in weights to apply to the network; a value of (2) will alter the weights by the calculated changes and a value of (3) will both calculate the change and alter the values of the weights.</p> 
+<p>A combination of the momentum term and the mode operator allows the algorithm to be applied to both online learning where the weights are altered after the presentation of each pattern, and to batch learning where all of the training patterns are presented and the accumulated weight changes are made at the end of a cycle.</p>
+</description>
+<example type="source">NNetBackward.c</example>
+</function>
+<function>
+<name>NNetCalcError</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>float NNetCalcError(<sn href="structNNet.html">struct NNet *ptr</sn>,float *target);</syntax>
+<description><p>The <fn href="NNetCalcError.html">NNetCalcError</fn> calculates the error between the output of a neural network and the desired targets.</p>
+<p>The argument <ar>ptr</ar> points to the network and the argument <ar>tgt</ar> points to an array of desired target values for the output nodes.</p>
+</description>
+<returns>Returns the calculated error.</returns>
+<example type="source">NNetCalcError.c</example>
+</function>
+<function>
+<name>NNetCodeActv</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>void NNetCodeActv(int code,float (**actv)(float), float (**dactv)(float,float));</syntax>
+<description><p>The <fn href="NNetCodeActv.html">NNetCodeActv</fn> determines the correct functions to call in response to an encoded activation number.</p>  
+<p>If the argument <ar>code</ar> is recognized as one of the built in activation functions then the locations pointed to by the arguments <ar>actv</ar> and <ar>dactv</ar> are set to point to the activation function and its derivative respectively. If the code is not recognized then the locations are set to <code>NULL</code> pointers.</p>
+<p>The location pointed to by the argument <ar>actv</ar> is set to point to a function of the form:</p>
+<fd>float actv(float x);</fd>
+<p>The function returns the activation level for each node of the network from the sum of its inputs and threshold given by the argument <ar>x</ar>.</p>
+<p>The location pointed to by the argument <ar>dactv</ar> is set to point to a function of the form:</p>
+<fd>float dactv(float y,float x);</fd>
+<p>The function returns the first order differential of the activation function. The argument <ar>y</ar> is the previously calculated activation of the node and the argument <ar>x</ar> is the sum of the inputs and threshold used to calculate this value.</p>
+</description>
+<example type="source">NNetCodeActv.c</example>
+
+</function>
+<function>
+<name>NNetFltRnd</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>float NNetFltRnd(float max);</syntax>
+<description><p>The <fn href="NNetFltRnd.html">NNetFltRnd</fn> generates a random floating-point number between zero and the value given by the argument <ar>max</ar>.</p>
+</description>
+<returns>Returns a random floating-point number.</returns>
+<example type="source">NNetFltRnd.c</example>
+</function>
+<function>
+<name>NNetForward</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>void NNetForward(<sn href="structNNet.html">struct NNet</sn> *ptr);</syntax>
+<description><p>The <fn href="NNetForward.html">NNetForward</fn> calculates the outputs of a neural network by performing the forward propagation step.</p> 
+<p>The network is pointed to by the argument <ar>ptr</ar>.</p>
+</description>
+<example type="source">NNetForward.c</example>
+</function>
+<function>
+<name>NNetFreadNet</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax><sn href="structNNet.html">struct NNet</sn> *NNetFreadNet(FILE *fp, void (*cactv)(int,float (**a)(float), float (**d)(float,float)));</syntax>
+<description><p>The <fn href="NNetFreadNet.html">NNetFreadNet</fn> reads a neural network from a file.</p>
+<p>The network is read from the file pointed to by the argument <ar>fp</ar>. The argument <ar>cactv</ar> is a pointer to a function of the form:</p>
+
+<fd>int (*cactv)(int c,float (**a)(float x),float (**d)(float y,float x)));</fd><p>The function determines the correct functions to call in response to the encoded activation number stored in the file.</p> 
+<p>If the code given by the argument <ar>c</ar> is recognized then the locations pointed to by the arguments <ar>a</ar> and <ar>d</ar> are set to point to the appropriate activation function and its derivative respectively. If the code is not recognized then the locations are set to <code>NULL</code> pointers.</p>
+<p>The location pointed to by the argument a is set to point to a function of the form:</p>
+<fd>float a(float x);</fd>
+
+<p>The function returns the activation level for each node of the network from the sum of its inputs and threshold given by the argument <ar>x</ar>.</p>
+<p>The location pointed to by the argument <ar>d</ar> is set to point to a function of the form:</p>
+
+<fd>float d(float y,float x);</fd>
+
+<p>The function returns the first order differential of the activation function. The argument <ar>y</ar> is the previously calculated activation of the node and the argument <ar>x</ar> is the sum of the inputs and threshold used to calculate this value.</p>
+<p>If the argument cactv is a NULL pointer then the function <fn href="NNetCodeActv.html">NNetCodeActv</fn> will be used.</p>
+</description> 
+<returns>Returns a pointer to the neural network structure on success. On error, a <code>NULL</code> pointer is returned.</returns>
+<errors>On error, a <code>NULL</code> pointer is returned.</errors> 
+<example type="source">NNetFreadNet.c</example>
+</function>
+<function>
+<name>NNetFreeNet</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>void NNetFreeNet(<sn href="structNNet.html">struct NNet</sn> *ptr);</syntax>
+<description><p>The <fn href="NNetFreeNet.html">NNetFreeNet</fn> releases memory allocated to store a neural network.</p>
+<p>The network is pointed to by the argument <ar>ptr</ar>.</p>
+</description> 
+<example type="source">NNetFreeNet.c</example>
+</function>
+<function>
+<name>NNetFwriteNet</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>int NNetFwriteNet(FILE *fp,<sn href="structNNet.html">struct NNet</sn> *ptr, int (*actvc)(float (*a)(float)));</syntax>
+<description><p>The <fn href="NNetFwriteNet.html">NNetFwriteNet</fn> writes a neural network to a file.</p>
+<p>The network is stored in the file pointed to by the argument <ar>fp</ar>. The network to be stored is pointed to by the argument <ar>ptr</ar>. The argument 
+<ar>actvc</ar> is a pointer to a function of the form:</p>
+<fd>int actv(float (*a)(float x));</fd>
+<p>The function converts an activation function pointed to by the argument <ar>a</ar> into a code number that will be stored in the file.</p>  
+<p>The form of the activation function is:</p>
+<fd>float a (float x);</fd>
+<p>The function should return the activation level for each node of the network from the sum of its inputs and threshold given by the argument <ar>x</ar>.</p>
+<p>If the argument <ar>actvc</ar> is a <code>NULL</code> pointer then the function <fn href="NNetActvCode.html">NNetActvCode</fn> will be used.</p>
+</description>
+<returns>Returns zero on success. On error, (-1) is returned.</returns>
+<errors>On error, (-1) is returned.</errors>
+<example type="source">NNetFwriteNet.c</example>
+</function>
+<function>
+<name>NNetMakeNet</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax><sn href="structNNet.html">struct NNet</sn> *NNetMakeNet(int num,char *info,int *nodes, float (*actv)(float), float (*dactv)(float,float));</syntax>
+<description><p>The <fn href="NNetMakeNet.html">NNetMakeNet</fn> creates fully connected neural network suitable for training using the back-propagation algorithm.</p> 
+<p>The number of layers in the network is given by the argument <ar>num</ar>.</p> 
+<p>The argument <ar>info</ar> is a pointer to a zero terminated string that contains a brief description of the network. If the argument <ar>info</ar> is a <code>NULL</code> pointer then no description is included.</p> 
+<p>The argument <ar>nodes</ar> is a pointer to an array containing the number of nodes in each layer of the network starting with the input layer.</p> 
+<p>The argument <ar>actv</ar> is a pointer to a function of the form:</p>
+<fd>float actv(float x);</fd>
+<p>The function should return the activation level for each node of the network from the sum of its inputs and threshold given by the argument <ar>x</ar>.</p>
+<p>The argument dactv is a pointer to a function of the form:</p>
+<fd>float dactv(float y,float x);</fd>
+<p>The function should return the first order differential of the activation function. The argument <ar>y</ar> is the previously calculated activation of the node and the argument <ar>x</ar> is the sum of the inputs and threshold used to calculate this value.</p>
+</description>
+<returns>Returns a pointer to the neural network structure on success. On error, a <code>NULL</code> pointer is returned.</returns>
+<errors>On error, a <code>NULL</code> pointer is returned.</errors> 
+<example type="source">NNetMakeNet.c</example>
+</function>
+<function>
+<name>NNetOutputValue</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>void NNetOutputValue(<sn href="structNNet.html">struct NNet</sn> *ptr,float *output);</syntax>
+<description><p>The <fn href="NNetOutputValue.html">NNetOutputValue</fn> extracts the output values of a neural network.</p>
+<p>The network is pointed to by the argument <ar>ptr</ar>. The values of the output nodes are stored in the array pointed to by the argument <ar>out</ar>.</p> 
+</description>
+<example type="source">NNetOutputValue.c</example>
+</function>
+<function>
+<name>NNetReadNet</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax><sn href="structNNet.html">struct NNet</sn> *NNetReadNet(int fileno, void (*cactv)(int,float (**a)(float), float (**d)(float,float)));</syntax>
+
+<description><p>The <fn href="NNetReadNet.html">NNetReadNet</fn> reads a neural network from a file.</p>
+<p>The network is read from the file with the descriptor given the argument <ar>fileno</ar>. The argument <ar>cactv</ar> is a pointer to a function of the form:</p>
+
+<fd>int (*cactv)(int c,float (**a)(float x),float (**d)(float y,float x)));</fd><p>The function determines the correct functions to call in response to the encoded activation number stored in the file.</p> 
+<p>If the code given by the argument <ar>c</ar> is recognized then the locations pointed to by the arguments <ar>a</ar> and <ar>d</ar> are set to point to the appropriate activation function and its derivative respectively. If the code is not recognized then the locations are set to <code>NULL</code> pointers.</p>
+<p>The location pointed to by the argument a is set to point to a function of the form:</p>
+<fd>float a(float x);</fd>
+
+<p>The function returns the activation level for each node of the network from the sum of its inputs and threshold given by the argument <ar>x</ar>.</p>
+<p>The location pointed to by the argument <ar>d</ar> is set to point to a function of the form:</p>
+
+<fd>float d(float y,float x);</fd>
+
+<p>The function returns the first order differential of the activation function. The argument <ar>y</ar> is the previously calculated activation of the node and the argument <ar>x</ar> is the sum of the inputs and threshold used to calculate this value.</p>
+<p>If the argument cactv is a NULL pointer then the function <fn href="NNetCodeActv.html">NNetCodeActv</fn> will be used.</p>
+</description> 
+<returns>Returns a pointer to the neural network structure on success. On error, a <code>NULL</code> pointer is returned.</returns>
+<errors>On error, a <code>NULL</code> pointer is returned.</errors> 
+<example type="source">NNetReadNet.c</example>
+</function>
+<function>
+<name>NNetRndNet</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>void NNetRndNet(<sn href="structNNet.html">struct NNet</sn> *ptr);</syntax>
+<description><p>The <fn href="NNetRndNet.html">NNetRndNet</fn> randomizes the weights and thresholds of the neural network pointed to by the argument <ar>ptr</ar>.</p>
+</description>
+<example type="source">NNetRndNet.c</example>
+</function>
+<function>
+<name>NNetSetInput</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>void NNetSetInput(<sn href="structNNet.html">struct NNet</sn> *ptr,float *input);</syntax>
+<description><p>The <fn href="NNetSetInput.html">NNetSetInput</fn> sets the input nodes of a neural network.</p>
+<p>The network is pointed to by the argument <ar>ptr</ar>. The input nodes are set to the values contained in the array pointed to by the argument <ar>input</ar>.</p>
+</description>
+<example type="source">NNetSetInput.c</example>
+</function>
+<function>
+<name>NNetSigActv</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>float NNetSigActv(float val);</syntax>
+<description><p>The <fn href="NNetSigActv.html">NNetSigActv</fn> calculates the sigmoid activation function based on the input <ar>val</ar>.</p>
+</description>
+<returns>Returns the value of the sigmoid activation function.</returns>
+<example type="source">NNetSigActv.c</example>
+</function>
+<function>
+<name>NNetSigDactv</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>float NNetSigDactv(float val,float sum);</syntax>
+<description><p>The <fn href="NNetSigDactv.html">NNetSigDactv</fn> calculates the first order differential of the sigmoid activation function based on the input <ar>val</ar>.</p>
+</description>
+<returns>Returns the value of the first order differential of the sigmoid activation function.</returns>
+<example type="source">NNetSigDactv.c</example>
+</function>
+<function>
+<name>NNetWriteNet</name>
+<location>src.lib/general/nnet</location>
+<header>general/rnnet.h</header>
+<syntax>int NNetWriteNet(int fileno,<sn href="structNNet.html">struct NNet</sn> *ptr, int (*actvc)(float (*a)(float)));</syntax>
+<description><p>The <fn href="NNetWriteNet.html">NNetWriteNet</fn> writes a neural network to a file.</p>
+<p>The network is stored in the file with the descriptor <ar>fileno</ar>. The network to be stored is pointed to by the argument <ar>ptr</ar>. The argument 
+<ar>actvc</ar> is a pointer to a function of the form:</p>
+<fd>int actv(float (*a)(float x));</fd>
+<p>The function converts an activation function pointed to by the argument <ar>a</ar> into a code number that will be stored in the file.</p>  
+<p>The form of the activation function is:</p>
+<fd>float a (float x);</fd>
+<p>The function should return the activation level for each node of the network from the sum of its inputs and threshold given by the argument <ar>x</ar>.</p>
+<p>If the argument <ar>actvc</ar> is a <code>NULL</code> pointer then the function <fn href="NNetActvCode.html">NNetActvCode</fn> will be used.</p>
+</description>
+<returns>Returns zero on success. On error, (-1) is returned.</returns>
+<errors>On error, (-1) is returned.</errors>
+<example type="source">NNetWriteNet.c</example>
+</function>
+<structure>
+ <name>NNet</name>
+ <location>src.lib/general/nnet</location>
+ <header>general/rnnet.h</header>
+ <struct>
+   <member>
+     <code>int num;</code>
+     <description>Number layers in the network.</description>
+   </member>
+   <member>
+     <code><sn href="structNNetLayer.html">struct NNetLayer</sn> **lyr;</code>
+     <description>Pointer to the layers that make up the network.</description>
+   </member>
+   <member>
+     <code>int major;</code>
+     <description>Major version number of the network.</description>
+   </member>
+   <member>
+     <code>int major;</code>
+     <description>Minor version number of the network.</description>
+   </member>
+   <member>
+     <code>char *info;</code>
+     <description>Pointer to a zero terminated text string that describes the network.</description>
+   </member>
+</struct>
+<description><p>The <sn href="structNNet.html">struct NNet</sn> structure stores a neural network.</p>
+</description>
+</structure>
+
+
+
+
+
+<structure>
+ <name>NNetCell</name>
+ <location>src.lib/general/nnet</location>
+ <header>general/rnnet.h</header>
+ <struct>
+   <member>
+     <code>int num;</code>
+     <description>Number of connections to this cell.</description>
+   </member>
+   <member>
+     <code>int idx;</code>
+     <description>Index of this cell in the layer.</description>
+   </member>
+   <member>
+     <code>float (*actv)(float);</code>
+     <description>Pointer to the cell activation function.</description>
+   </member>
+   <member>
+     <code>float (*dactv)(float,float);</code>
+     <description>Pointer to the first-order derivative of the cell activation function.</description>
+   </member>
+   <member>
+     <code><sn href="structNNetCell.html">struct NNetCell</sn> **parent;</code>
+     <description>Array of pointers to parent nodes in the layer above.</description>
+   </member>
+   <member>
+     <code>float *wgt;</code>
+     <description>Weights of the connection links.</description>
+   </member>
+   <member>
+     <code>float thr;</code>
+     <description>Activation threshold.</description>
+   </member>
+   <member>
+     <code>float sum;</code>
+     <description>Sum of the product of weights and inputs.</description>
+   </member>
+   <member>
+     <code>float val;</code>
+     <description>Output value.</description>
+   </member>
+
+   <member>
+     <struct>
+       <member>
+          <code>float *wgt;</code>
+          <description>Weight adjustment.</description>
+       </member>
+       <member>
+          <code>float thr;</code>
+          <description>Change in threshold.</description>
+       </member>
+       <member>
+          <code>float val;</code>
+          <description>Desired change in output value of cell.</description>
+       </member>
+      </struct>
+      <code>delta;</code>
+      <description>Delta terms used in training the cell.</description>
+   </member>
+ </struct>
+<description><p>The <sn href="structNNetCell.html">struct NNetCell</sn> structure stores a single node or cell of a neural network.</p>
+</description>
+</structure>
+
+
+<structure>
+ <name>NNetLayer</name>
+ <location>src.lib/general/nnet</location>
+ <header>general/rnnet.h</header>
+ <struct>
+   <member>
+     <code>int num;</code>
+     <description>Number cells in the layer.</description>
+   </member>
+   <member>
+     <code><sn href="structNNetCell.html">struct NNetCell</sn> **cell;</code>
+     <description>Pointer to the cells that make up the layer.</description>
+   </member>
+</struct>
+<description><p>The <sn href="structNNetLayer.html">struct NNetLayer</sn> structure stores a single layer of a neural network.</p>
+</description>
+</structure>
+
+
+</library>

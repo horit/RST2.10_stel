@@ -1,0 +1,6 @@
+set_coords,'gate'
+set_ps_font,'on'
+;set_news,'off'
+set_min_charsize,0.6
+set_auto_rti_limits,'on'
+

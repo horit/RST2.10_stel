@@ -1,0 +1,17 @@
+# $Log: version.info,v $
+# Revision 1.4  2006/03/14 20:08:09  barnes
+# Added code to allow the number of beams to be varied.
+#
+# Revision 1.3  2004/05/04 22:47:35  barnes
+# Changed math header name.
+#
+# Revision 1.2  2004/04/26 22:32:06  barnes
+# Audit - Enforced warning "all".
+#
+# Revision 1.1  2004/04/26 18:04:41  barnes
+# Initial revision
+#
+#
+cnvtcoord.c 1.03
+calcvector.c 1.02
+invmag.c 1.03

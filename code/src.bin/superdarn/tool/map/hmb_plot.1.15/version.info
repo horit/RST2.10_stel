@@ -1,0 +1,50 @@
+# $Log: version.info,v $
+# Revision 1.15  2005/08/17 21:43:25  barnes
+# Fixed bug in setting the name of the plot.
+#
+# Revision 1.14  2005/08/10 21:57:21  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.13  2004/10/12 23:12:57  barnes
+# Moved to DataMap format.
+#
+# Revision 1.12  2004/05/10 22:03:52  barnes
+# Removed redundant code.
+#
+# Revision 1.11  2003/03/15 21:29:52  barnes
+# Added information (metadata) to plot.
+#
+# Revision 1.10  2003/03/14 20:28:29  barnes
+# Added support for extended PPM files.
+#
+# Revision 1.9  2003/03/14 20:21:49  barnes
+# Added a name to the plot.
+#
+# Revision 1.8  2003/03/07 03:13:48  barnes
+# Modification to command line arguments.
+#
+# Revision 1.7  2003/03/01 00:06:50  barnes
+# Fixed bug in setting up the command line options.
+#
+# Revision 1.6  2003/02/28 22:25:13  barnes
+# Fixed minor bug in decoding options.
+#
+# Revision 1.5  2003/02/28 21:29:15  barnes
+# Major modifications to support the base libraries and
+# Rplot XML output.
+#
+# Revision 1.4  2002/04/10 19:17:02  barnes
+# Added code to deal with Southern Hemisphere.
+#
+# Revision 1.3  2001/07/09 18:17:21  barnes
+# Modified the way the axis is drawn.
+#
+# Revision 1.2  2001/06/27 21:09:15  barnes
+# Added license tag
+#
+# Revision 1.1  2001/06/21 16:18:19  barnes
+# Initial revision
+#
+#
+hmb_plot.c 1.16
+

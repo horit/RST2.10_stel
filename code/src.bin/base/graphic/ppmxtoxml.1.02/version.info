@@ -1,0 +1,9 @@
+# $Log: version.info,v $
+# Revision 1.2  2005/08/05 20:26:59  barnes
+# Added option to dump the command line options
+#
+# Revision 1.1  2004/05/10 18:41:02  barnes
+# Initial revision
+#
+#
+ppmxtoxml.c 1.03

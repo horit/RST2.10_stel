@@ -1,0 +1,21 @@
+# $Log: version.info,v $
+# Revision 1.6  2005/04/13 19:45:36  barnes
+# Fixed function name typo.
+#
+# Revision 1.5  2004/06/22 17:29:32  barnes
+# Changed references of Long to Int.
+#
+# Revision 1.4  2004/06/16 16:45:17  barnes
+# Used the rand function.
+#
+# Revision 1.3  2004/05/04 18:01:34  barnes
+# Renamed the type header to avoid confusion.
+#
+# Revision 1.2  2004/04/26 21:04:09  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/02/24 23:38:24  barnes
+# Initial revision
+#
+#
+nnet.c 1.06

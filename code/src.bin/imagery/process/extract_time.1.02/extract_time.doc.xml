@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>extract_time</name>
+<location>src.bin/imagery/process/extract_time</location>
+<syntax>extract_time <ar>filename...</ar></syntax>
+<option><on><ar>filename...</ar></on><od>filenames of the SImage files to process.</od>
+</option>
+<synopsis><p>Extracts the start and end time of an SImage file or files.</p></synopsis>
+
+<description><p>Extracts the start and end time of an SImage file or files.</p>
+<p>The start and end time of the image and the filename are written to standard output.</p> </description>
+<example>
+<command>extract_time *.simage &gt; time.txt</command>
+<description>Extract the start and end time of all the SImage files in the current directory and store them in the file "<code>time.txt</code>".</description>
+</example>
+
+</binary>

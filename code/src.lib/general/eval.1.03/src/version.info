@@ -1,0 +1,12 @@
+# $Log: version.info,v $
+# Revision 1.3  2004/06/16 16:48:49  barnes
+# Removed unreachable code.
+#
+# Revision 1.2  2004/04/26 20:41:24  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/02/24 22:45:03  barnes
+# Initial revision
+#
+#
+eval.c 1.03

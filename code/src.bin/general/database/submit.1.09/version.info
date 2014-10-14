@@ -1,0 +1,35 @@
+# $Log: version.info,v $
+# Revision 1.9  2007/03/26 16:46:17  code
+# Fixed sign of char pointer on darwin.
+#
+# Revision 1.8  2006/11/18 14:25:27  code
+# General version confusion - no changes to code.
+#
+# Revision 1.7  2006/11/18 14:24:46  code
+# Fixed bug in setting the submitc command.
+#
+# Revision 1.6  2006/11/18 14:24:13  code
+# Fixed bug in setting the submitc command.
+#
+# Revision 1.5  2005/03/22 16:43:17  barnes
+# Preserved query through system.
+#
+# Revision 1.4  2005/03/22 15:08:03  barnes
+# Fixed the modifier syntax to agree with show.cgi.
+#
+# Revision 1.3  2004/06/21 21:48:46  barnes
+# Added missing header.
+#
+# Revision 1.2  2004/06/02 14:37:59  barnes
+# Added post processing command.
+#
+# Revision 1.1  2004/05/10 20:09:53  barnes
+# Initial revision
+#
+#
+convert.c 1.03
+findorder.c 1.02
+loadconfig.c 1.06
+post.c 1.02
+ssi.c 1.04
+submit.c 1.07

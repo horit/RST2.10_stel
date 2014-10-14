@@ -1,0 +1,15 @@
+# $Log: version.info,v $
+# Revision 1.4  2005/08/11 13:45:48  barnes
+# Added option to dump command line options.
+#
+# Revision 1.3  2004/10/13 15:48:30  barnes
+# Moved to DataMap format.
+#
+# Revision 1.2  2004/06/21 22:39:00  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 22:10:16  barnes
+# Initial revision
+#
+#
+maptometaxml.c 1.04

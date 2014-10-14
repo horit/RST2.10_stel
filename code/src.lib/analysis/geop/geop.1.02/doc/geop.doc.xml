@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>geop</name>
+<location>src.lib/analysis/geop/geop</location>
+
+<function>
+<name>GEOPGeoGsm</name>
+<location>src.lib/analysis/geop/geop</location>
+<header>analysis/geop.h</header>
+<syntax>void GEOPGeoGsm(int yr,int mo,int dy,int hr,int mt,double sc,double *bgeo,double *bgsm);</syntax>
+<description><p>The <fn href="GEOPGeoGsm.html">GEOPGeoGsm</fn> function converts from geographic to Geocentric Solar Magnetospheric (GSM) coordinates.</p>
+<p>The arguments <ar>yr</ar>, <ar>mo</ar>, <ar>dy</ar>, <ar>hr</ar>, <ar>mt</ar>, and <ar>sc</ar> give the UT time for the conversion. The argument <ar>bgeo</ar> points to an array containing the X, Y, and Z components of the geographic coordinate. The components of the GSM coordinate are stored in the array pointed to by the argument <ar>bgsm</ar>.</p></description>
+<returns>None.</returns>
+<errors>None.</errors>
+<example type="source">GEOPGeoGsm.c</example>
+</function>
+
+<function>
+<name>GEOPGseGsm</name>
+<location>src.lib/analysis/geop/geop</location>
+<header>analysis/geop.h</header>
+<syntax>void GEOPGseGsm(int yr,int mo,int dy,int hr,int mt,double sc,double *bgse,double *bgsm);</syntax>
+<description><p>The <fn href="GEOPGseGsm.html">GEOPGseGsm</fn> function converts from Geocentric Solar Ecliptic (GSE) to Geocentric Solar Magnetospheric (GSM) coordinates.</p>
+<p>The arguments <ar>yr</ar>, <ar>mo</ar>, <ar>dy</ar>, <ar>hr</ar>, <ar>mt</ar>, and <ar>sc</ar> give the UT time for the conversion. The argument <ar>bgse</ar> points to an array containing the X, Y, and Z components of the GSE coordinate. The components of the GSM coordinate are stored in the array pointed to by the argument <ar>bgsm</ar>.</p></description> 
+<returns>None.</returns>
+<errors>None.</errors>
+<example type="source">GEOPGseGsm.c</example>
+</function>
+
+<function>
+<name>GEOPGsmGeo</name>
+<location>src.lib/analysis/geop/geop</location>
+<header>analysis/geop.h</header>
+<syntax>void GEOPGsmGeo(int yr,int mo,int dy,int hr,int mt,double sc,double *bgsm,double *bgeo);</syntax>
+<description><p>The <fn href="GEOPGsmGeo.html">GEOPGsmGeo</fn> function converts from Geocentric Solar Magnetospheric (GSM) to geographic coordinates.</p>
+<p>The arguments <ar>yr</ar>, <ar>mo</ar>, <ar>dy</ar>, <ar>hr</ar>, <ar>mt</ar>, and <ar>sc</ar> give the UT time for the conversion. The argument <ar>bgsm</ar> points to an array containing the X, Y, and Z components of the GSM coordinate. The components of the geographic coordinate are stored in the array pointed to by the argument <ar>bgeo</ar>.</p></description> 
+<returns>None.</returns>
+<errors>None.</errors>
+<example type="source">GEOPGsmGeo.c</example>
+</function>
+
+
+<function>
+<name>GEOPGsmGse</name>
+<location>src.lib/analysis/geop/geop</location>
+<header>analysis/geop.h</header>
+<syntax>void GEOPGsmGse(int yr,int mo,int dy,int hr,int mt,double sc,double *bgsm,double *bgse);</syntax>
+<description><p>The <fn href="GEOPGsmGse.html">GEOPGsmGse</fn> function converts from Geocentric Solar Magnetospheric (GSM) to Geocentric Solar Ecliptic coordinates.</p>
+<p>The arguments <ar>yr</ar>, <ar>mo</ar>, <ar>dy</ar>, <ar>hr</ar>, <ar>mt</ar>, and <ar>sc</ar> give the UT time for the conversion. The argument <ar>bgsm</ar> points to an array containing the X, Y, and Z components of the GSM coordinate. The components of the GSE coordinate are stored in the array pointed to by the argument <ar>bgse</ar>.</p></description> 
+<returns>None.</returns>
+<errors>None.</errors>
+<example type="source">GEOPGsmGse.c</example>
+</function>
+
+<function>
+<name>GEOPGsmSm</name>
+<location>src.lib/analysis/geop/geop</location>
+<header>analysis/geop.h</header>
+<syntax>void GEOPGsmSm(int yr,int mo,int dy,int hr,int mt,double sc,double *bgsm,double *bsm);</syntax>
+<description><p>The <fn href="GEOPGsmSm.html">GEOPGeoGsm</fn> function converts from Geocentric Solar Magnetospheric (GSM) to Solar Magnetic (SM) coordinates.</p>
+<p>The arguments <ar>yr</ar>, <ar>mo</ar>, <ar>dy</ar>, <ar>hr</ar>, <ar>mt</ar>, and <ar>sc</ar> give the UT time for the conversion. The argument <ar>bgsm</ar> points to an array containing the X, Y, and Z components of the GSM coordinate. The components of the SM coordinate are stored in the array pointed to by the argument <ar>bsm</ar>.</p></description> 
+<returns>None.</returns>
+<errors>None.</errors>
+<example type="source">GEOPGsmSm.c</example>
+</function>
+
+<function>
+<name>GEOPSmGsm</name>
+<location>src.lib/analysis/geop/geop</location>
+<header>analysis/geop.h</header>
+<syntax>void GEOPSmGsm(int yr,int mo,int dy,int hr,int mt,double sc,double *bsm,double *bgsm);</syntax>
+<description><p>The <fn href="GEOPSmGsm.html">GEOPSmGsm</fn> function converts from Solar Magnetic to Geocentric Solar Magnetospheric (GSM) coordinates.</p>
+<p>The arguments <ar>yr</ar>, <ar>mo</ar>, <ar>dy</ar>, <ar>hr</ar>, <ar>mt</ar>, and <ar>sc</ar> give the UT time for the conversion. The argument <ar>bsm</ar> points to an array containing the X, Y, and Z components of the SM coordinate. The components of the GSM coordinate are stored in the array pointed to by the argument <ar>bgsm</ar>.</p></description> 
+<returns>None.</returns>
+<example type="source">GEOPSmGsm.c</example>
+<errors>None.</errors>
+</function>
+
+
+
+</library>
+

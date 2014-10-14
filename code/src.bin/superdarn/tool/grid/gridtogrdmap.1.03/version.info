@@ -1,0 +1,12 @@
+# $Log: version.info,v $
+# Revision 1.3  2005/08/10 20:09:26  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.2  2004/10/08 20:01:41  barnes
+# Fixed missing header.
+#
+# Revision 1.1  2004/10/08 20:00:49  barnes
+# Initial revision
+#
+#
+gridtogrdmap.c 1.03

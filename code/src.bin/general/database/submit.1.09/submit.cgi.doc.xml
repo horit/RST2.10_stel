@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>submit.cgi</name>
+<location>src.bin/general/database/submit.cgi</location>
+<syntax>submit.cgi</syntax>
+<synopsis><p>CGI script for adding an entry to a database.</p></synopsis>
+<description><p>CGI script for adding an entry to a database.</p></description>
+
+</binary>

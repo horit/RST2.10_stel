@@ -1,0 +1,20 @@
+# $Log: version.info,v $
+# Revision 1.4  2004/11/10 15:06:39  barnes
+# Added the ability to offset the Axis titles.
+#
+# Revision 1.3  2004/05/04 22:43:31  barnes
+# Changed math header name.
+#
+# Revision 1.2  2004/04/26 21:09:04  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/03/05 15:32:10  barnes
+# Initial revision
+#
+#
+rplotg.c 1.02
+rplotg_key.c 1.01
+rplotgraw.c 1.02
+rplotgraw_key.c 1.01
+rplotgstd_key.c 1.02
+rplotgraw_contour.c 1.03

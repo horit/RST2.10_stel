@@ -1,0 +1,20 @@
+#!/bin/bash
+# Cutlass / SuperDARN environment variables and setup
+
+# Environment variables
+export GO_DEFAULT_DEVICE="X"
+export HOMEPATH=/data1/g3/nisitani/sddata/software/current
+
+. ${HOMEPATH}/profile.superdarn-toolkit.bash
+. ${HOMEPATH}/profile.go-variables.bash
+
+export IDL_STARTUP=${HOMEPATH}/idl/go_routines/startup_go.pro
+
+# Check for resize of Go working area (number of hours specified)
+if test -n "$1"
+   then SD_MAX_HOURS=24
+        export SD_MAX_HOURS
+fi
+
+# Startup Go through IDL
+/usr/local/bin/idl $1

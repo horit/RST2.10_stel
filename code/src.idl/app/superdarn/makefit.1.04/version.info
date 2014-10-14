@@ -1,0 +1,28 @@
+# $Log: version.info,v $
+# Revision 1.4  2006/08/18 18:28:49  code
+# Fixed array sizes.
+#
+# Revision 1.3  2006/04/13 16:14:14  barnes
+# Modification to deal with radars with extra beams.
+#
+# Revision 1.2  2005/07/06 20:56:34  barnes
+# Fixed bug in not writing out index file.
+#
+#
+calcphires.pro 1.01
+dofit.pro 1.02
+dophasefit.pro 1.01
+elevation.pro 1.02
+elevgoose.pro 1.02
+fitacfal.pro 1.01
+fitacfwrapper.pro 1.03
+fitelv.pro 1.01
+fitnoise.pro 1.01
+fitrange.pro 1.01
+groundscatter.pro 1.01
+makefit.pro 1.02
+morebadlags.pro 1.01
+noiseacf.pro 1.01
+noisestat.pro 1.01
+omegaguess.pro 1.01
+removenoise.pro 1.01

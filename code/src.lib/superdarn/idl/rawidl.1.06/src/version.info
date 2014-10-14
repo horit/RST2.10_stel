@@ -1,0 +1,22 @@
+# $Log: version.info,v $
+# Revision 1.6  2007/01/30 19:25:20  code
+# The lag table is one longer than reported - this is the alternative
+# lag zero.
+#
+# Revision 1.5  2006/07/13 15:21:05  code
+# Fixed bug in copying the origin data.
+#
+# Revision 1.4  2006/07/12 17:15:10  code
+# Modification to handle the origin code.
+#
+# Revision 1.3  2004/08/27 19:28:29  barnes
+# Added function for setting the file pointer.
+#
+# Revision 1.2  2004/08/18 23:03:06  barnes
+# Forced streams to be flushed after every operation.
+#
+# Revision 1.1  2004/08/03 22:13:02  barnes
+# Initial revision
+#
+#
+rawidl.c 1.06

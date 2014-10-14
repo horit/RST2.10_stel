@@ -1,0 +1,21 @@
+# $Log: version.info,v $
+# Revision 1.6  2007/03/09 14:31:59  code
+# Fixed seek.
+#
+# Revision 1.5  2004/06/22 17:30:23  barnes
+# Changed references of Long to Int.
+#
+# Revision 1.4  2004/05/05 15:05:31  barnes
+# Added missing header.
+#
+# Revision 1.3  2004/05/04 18:02:22  barnes
+# Renamed the type header to avoid confusion.
+#
+# Revision 1.2  2004/04/26 21:13:52  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/02/24 23:52:22  barnes
+# Initial revision
+#
+#
+rfile.c 1.06

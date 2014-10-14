@@ -1,0 +1,17 @@
+# $Log: version.info,v $
+# Revision 1.4  2005/11/02 20:42:03  barnes
+# Fixed bug in handling the terminator.
+#
+# Revision 1.3  2005/08/11 14:31:40  barnes
+# Added option to dump command line options.
+#
+# Revision 1.2  2004/08/25 00:58:31  barnes
+# Removed redundant background polygon.
+#
+# Revision 1.1  2004/06/08 20:47:29  barnes
+# Initial revision
+#
+#
+clip.c 1.01
+geo_globerp.c 1.04
+make_grid.c 1.01

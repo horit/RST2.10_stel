@@ -1,0 +1,9 @@
+# $Log: version.info,v $
+# Revision 1.2  2007/03/15 20:47:29  code
+# Added code to display help and command line options.
+#
+# Revision 1.1  2004/05/10 18:15:03  barnes
+# Initial revision
+#
+#
+extract_time.c 1.06

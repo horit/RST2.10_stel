@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>make_csd</name>
+<location>src.bin/superdarn/tool/csd/make_csd</location>
+<syntax>make_csd --help</syntax>
+<syntax>make_csd [-vb] [-new] [-cfit] [-t <ar>minpwr</ar>] [-b <ar>bmnum</ar>] [-a] [-p pmax] [-v vmax] [-w wmax] <ar>name</ar></syntax>
+
+
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+<option><on>-vb</on><od>verbose. Log information to the console.</od>
+</option>
+<option><on>-new</on><od>the input file is in the <code>fitacf</code> format.</od>
+</option>
+<option><on>-cfit</on><od>the input file is in the <code>cfit</code> format.</od>
+</option>
+
+<option><on>-t <ar>minpwr</ar></on><od>filter out data with values of lag-zero power less than <ar>minpwr</ar>.</od>
+</option>
+<option><on>-b <ar>bmnum</ar></on><od>store data from the beam <ar>bmnum</ar> only.</od>
+</option>
+<option><on>-a</on><od>store the lambda power, velocity and lambda spectral width.</od>
+</option>
+<option><on>-p <ar>pmax</ar></on><od>store lambda power and set the maximum of the power scale to <ar>pmax</ar>.</od>
+</option>
+<option><on>-v <ar>vmax</ar></on><od>store velocity and set the maximum of the velocity scale to +<ar>vmax</ar> and the minimum to -<ar>vmin</ar>.</od>
+</option>
+<option><on>-w <ar>wmax</ar></on><od>store lambda spectral width and set the maximum of the spectral width scale to <ar>wmax</ar>.</od>
+</option>
+<option><on><ar>name</ar></on><od>filename of the  input file.</od>
+</option>
+<synopsis><p>Creates a <code>csd</code> format file from either a <code>fit</code>, <code>fitacf</code>, or <code>cfit</code> format file.</p></synopsis>
+
+
+<description><p>Creates a <code>csd</code> format file from either a <code>fit</code>, <code>fitacf</code>, or <code>cfit</code> format file.</p>
+<p>The file is written to standard output.</p>
+</description>
+
+<example>
+<command>make_csd -vb -pwr 5 -a 19971020.gbr.fit &gt; 19971020.gbr.csd</command>
+<description>Generates a <code>csd</code> format file from the <code>fit</code> file "<code>19971020.gbr.fit</code>" to produce a file called "<code>19971020.gbr.csd</code>". All beams and all parameters are stored. Ranges with lag-zero power less than 5dB are ignored. Status is logged on standard error.</description>
+</example>
+<example>
+<command>make_cmp -b 8 -v 1000 -p 30 19981105.kap.fit &gt; 19981105.kap.csd</command>
+<description> Generates a <code>csd</code> format file from the <code>fitacf</code> files called "<code>19981105*.kap.fitacf</code>" to produce a file called "<code>19981105.kap.csd</code>". Only beam 8 is stored in the file. Velocity with a scale limit of 1000 m/s and Lambda power with a scale limit of 30dB are stored.</description>
+</example>
+
+
+</binary>

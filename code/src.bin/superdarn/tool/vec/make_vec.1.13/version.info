@@ -1,0 +1,42 @@
+# $Log: version.info,v $
+# Revision 1.13  2005/08/17 18:10:45  barnes
+# Fixed bug that meant the task would free fall.
+#
+# Revision 1.12  2005/08/10 15:41:01  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.11  2004/10/14 18:05:22  barnes
+# Moved to DataMap format for grid files.
+#
+# Revision 1.10  2004/06/21 22:52:48  barnes
+# Added missing header.
+#
+# Revision 1.9  2004/06/04 01:42:17  barnes
+# Adopted the use of strings as radar identifier.
+#
+# Revision 1.8  2004/05/10 21:48:13  barnes
+# Removed redundant code.
+#
+# Revision 1.7  2003/04/25 14:53:39  barnes
+# Fixed bug in printing empty records.
+#
+# Revision 1.6  2003/02/25 23:25:24  barnes
+# Modification to use the base libraries.
+#
+# Revision 1.5  2001/06/27 21:07:28  barnes
+# Added license tag
+#
+# Revision 1.4  2001/01/29 18:41:19  barnes
+# Added Author Name
+#
+# Revision 1.3  2000/08/22 15:13:20  barnes
+# Added return to main.
+#
+# Revision 1.2  2000/08/16 22:47:41  barnes
+# changed return type of main().
+#
+# Revision 1.1  1999/12/17 19:30:50  barnes
+# Initial revision
+#
+make_vec.c 1.19
+

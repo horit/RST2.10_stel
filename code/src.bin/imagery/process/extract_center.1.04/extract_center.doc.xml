@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>extract_center</name>
+<location>src.bin/imagery/process/extract_center</location>
+<syntax>extract_center <ar>filename...</ar></syntax>
+<option><on><ar>filename...</ar></on><od>filenames of the SImage files to process.</od>
+</option>
+<synopsis><p>Extracts the geographics center point of an SImage file or files.</p></synopsis>
+<description><p>Extracts the geographics center point of an SImage file or files.</p>
+<p>The start and end time of the image, a flag indicating whether the center pixel is on the earth, the geographic latitude and longitude and the filename are written to standard output.</p> </description>
+<example>
+<command>extract_center *.simage &gt; center.txt</command>
+<description>Extract the center pixel of all the SImage files in the current directory and store them in the file "<code>center.txt</center>".</description>
+</example>
+</binary>

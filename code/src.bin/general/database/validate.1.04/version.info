@@ -1,0 +1,19 @@
+# $Log: version.info,v $
+# Revision 1.4  2005/03/22 16:42:58  barnes
+# Preserved query through system.
+#
+# Revision 1.3  2005/03/22 15:11:50  barnes
+# Fixed the modifier syntax to agree with show.cgi.
+#
+# Revision 1.2  2004/06/21 21:53:17  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 20:10:28  barnes
+# Initial revision
+#
+#
+convert.c 1.03
+loadconfig.c 1.04
+post.c 1.02
+ssi.c 1.03
+validate.c 1.05

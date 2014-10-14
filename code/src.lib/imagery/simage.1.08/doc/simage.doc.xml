@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>simage</name>
+<location>src.lib/imagery/simage</location>
+<function>
+<name>SImageFread</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simage.h</header>
+<syntax>int SImageFread(FILE *fp,<sn href="structSImage.html">struct SImage</sn> *ptr);</syntax>
+<description><p>The <fn href="SImageFread.html">SImageFread</fn> function reads a imagery data from an open stream.</p>
+<p>The imagery data is read from the open stream pointed to by the argument <ar>fp</ar>. The data are stored in the structure pointed to by the argument <ar>ptr</ar>.</p>
+</description>
+<returns>Returns the number of bytes used to store the data on success. On error, (-1) is returned.</returns>
+<errors>On error, (-1) is returned.</errors>
+<example type="source">SImageFread.c</example>
+</function>
+
+
+<function>
+<name>SImageFseek</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simageseek.h</header>
+<syntax>int SImageFseek(FILE *fp, int yr,int mo,int dy,int hr,int mt,int sc,double *atme, <sn href="structSImageIndex.html">struct SImageIndex</sn> *inx);</syntax>
+
+<description><p>The <fn href="SImageFseek.html">SImageFseek</fn> function searches for a imagery data for a specific time.</p>
+<p>The search is performed on the open stream pointed to by the argument <ar>fp</ar>. The time to search for is specified by the arguments <ar>yr</ar>, <ar>mo</ar>,<ar>dy</ar>,<ar>hr</ar>,<ar>mt</ar>,<ar>sc</ar> giving the year, month, day, hour, minute and second.</p>
+<p>The argument <ar>atme</ar> is a pointer to a double precision floating point number that is used to store the time of the closest record to the time requested expressed in seconds from 0:00UT January 1, 1970. If this argument is set to a <code>NULL</code> pointer then the time is not returned.</p>  
+<p>If the file containing the imagery data has an associated index that has been loaded, then it can be used to speed up the search by setting the argument <ar>inx</ar> to point to it.</p>
+</description>
+<returns>Returns zero on success. On error, (-1) is returned.</returns>
+<errors>On error, (-1) is returned.</errors>
+<example type="source">SImageFseek.c</example>
+
+
+</function>
+
+<function>
+<name>SImageFwrite</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simage.h</header>
+<syntax>int SImageFwrite(FILE *fp,<sn href="structSImage.html">struct SImage</sn> *ptr);</syntax>
+<description><p>The <fn href="SImageFwrite.html">SImageFwrite</fn> function writes a imagery data to an open stream.</p>
+<p>The data is written to the open stream pointed to by the argument <ar>fp</ar>.</p>
+<p>The imagery data are taken from the structure pointed to by the argument <ar>ptr</ar>.</p>
+</description>
+<returns>Returns the number of bytes written on success. On error, (-1) is returned.</returns>
+<errors>On error, (-1) is returned.</errors>
+<example type="source">SImageFseek.c</example>
+
+
+</function>
+
+
+
+<function>
+<name>SImageIndexFload</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simageindex.h</header>
+<syntax><sn href="structSImageIndex.html">struct SImageIndex</sn> *SImageIndexFload(FILE *fp);</syntax>
+<description><p>The <fn href="SImageIndexFload.html">SImageIndexFload</fn> function loads an index to a file imagery data.</p>
+<p>The index is loaded from the open stream pointed to by the argument <ar>fp</ar>.</p>  
+</description>
+<returns>Returns a pointer to a structure containing the index on success. On error, a <code>NULL</code> pointer is returned.</returns>
+<errors>On error, a <code>NULL</code> pointer is returned.</errors>
+<example type="source">SImageIndexFload.c</example>
+
+
+</function>
+<function>
+<name>SImageIndexFree</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simageindex.h</header>
+<syntax>void SImageIndexFree(<sn href="structSImageIndex.html">struct SImageIndex</sn> *ptr);</syntax>
+
+<description><p>The <fn href="SImageIndexFree.html">SImageIndexFree</fn> function frees memory allocated to store an index to a file imagery data.</p>
+<p>The index structure is pointed to by the argument <ar>ptr</ar>.</p>
+</description>
+<example type="source">SImageIndexFree.c</example>
+
+
+</function>
+<function>
+<name>SImageIndexLoad</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simageindex.h</header>
+<syntax><sn href="structSImageIndex.html">struct SImageIndex</sn> *SImageIndexLoad(int fid);</syntax>
+<description><p>The <fn href="SImageIndexLoad.html">SImageIndexLoad</fn> function loads an index to a file containing imagery data.</p>
+<p>The index is loaded from the file with the descriptor given by the argument <ar>fid</ar>.</p>  
+</description>
+<returns>Returns a pointer to a structure containing the index on success. On error, a <code>NULL</code> pointer is returned.</returns>
+<errors>On error, a <code>NULL</code> pointer is returned.</errors>
+<example type="source">SImageIndexLoad.c</example>
+
+
+</function>
+
+
+<function>
+<name>SImageRead</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simage.h</header>
+<syntax>int SImageRead(int fid,<sn href="structSImage.html">struct SImage</sn> *ptr);</syntax>
+<description><p>The <fn href="SImageRead.html">SImageRead</fn> function reads imagery data from an open file.</p>
+<p>The imagery data are read from the file with the descriptor given by the argument <ar>fid</ar>. The imagery data are stored in the structure pointed to by the argument <ar>ptr</ar>.</p>
+</description>
+<returns>Returns the number of bytes used to store the convection map on success. On error, (-1) is returned.</returns>
+<errors>On error, (-1) is returned.</errors>
+
+<example type="source">SImageRead.c</example>
+
+</function>
+
+
+<function>
+<name>SImageSeek</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simageseek.h</header>
+<syntax>int SImageSeek(int fid, int yr,int mo,int dy,int hr,int mt,int sc,double *atme, <sn href="structSImageIndex.html">struct SImageIndex</sn> *inx);</syntax>
+
+<description><p>The <fn href="SImageSeek.html">SImageSeek</fn> function searches for imagery data for a specific time.</p>
+<p>The search is performed on the file with the descriptor given by the argument <ar>fid</ar>. The time to search for is specified by the arguments <ar>yr</ar>, <ar>mo</ar>,<ar>dy</ar>,<ar>hr</ar>,<ar>mt</ar>,<ar>sc</ar> giving the year, month, day, hour, minute and second.</p>
+<p>The argument <ar>atme</ar> is a pointer to a double precision floating point number that is used to store the time of the closest record to the time requested expressed in seconds from 0:00UT January 1, 1970. If this argument is set to a <code>NULL</code> pointer then the time is not returned.</p>  
+<p>If the file containing the imagery data has an associated index that has been loaded, then it can be used to speed up the search by setting the argument <ar>inx</ar> to point to it.</p>
+</description>
+<returns>Returns zero on success. On error, (-1) is returned.</returns>
+<errors>On error, (-1) is returned.</errors>
+<example type="source">SImageSeek.c</example>
+
+
+</function>
+
+<function>
+<name>SImageWrite</name>
+<location>src.lib/imagery/simage</location>
+<header>imagery/simagewrite.h</header>
+<syntax>int SImageWrite(int fid,<sn href="structSImage.html">struct SImage</sn> *ptr);</syntax>
+<description><p>The <fn href="SImageWrite.html">SImageWrite</fn> function writes imagery data to an open file.</p>
+<p>The data are written to the file with the descriptor given by the argument <ar>fid</ar>.If <ar>fid</ar> is set to (-1) then the function will just calculate the number of bytes required to store the data.</p>
+<p>The imagery data are taken from the structure pointed to by the argument <ar>ptr</ar>.</p>
+</description>
+<returns>Returns the number of bytes written on success. On error, (-1) is returned.</returns>
+<errors>On error, (-1) is returned.</errors>
+<example type="source">SImageWrite.c</example>
+
+
+</function>
+
+<structure>
+ <name>SImage</name>
+ <location>src.lib/imagery/simage</location>
+ <header>imagery/simage.h</header>
+ <struct>
+
+   <member>
+      <code>double st_time;</code>
+      <description>Start time of the image, specified as seconds from 0:00UT January 1, 1970.</description>
+    </member>
+
+    <member>
+      <code>double ed_time;</code>
+      <description>End time of the image, specified as seconds from 0:00UT January 1, 1970.</description>
+    </member>
+
+    <member>
+      <struct>
+        <member>
+         <code>int major;</code>
+         <description>Major version number.</description>
+         </member>
+         <member>
+         <code>int minor;</code>
+         <description>Minor version number.</description>
+         </member>
+       </struct>
+       <code>version;</code>
+       <description>Version number.</description>
+    </member>
+
+    <member>
+      <code>char *source;</code>
+      <description>Pointer to a zero terminated string that describes the source of the image.</description>
+    </member>
+
+    <member>
+      <code>int code;</code>
+      <description>Identifier code for the source of the image.</description>
+    </member>
+
+    <member>
+      <code>float *min;</code>
+      <description>Pointer to an array containing the minimum intensities for each color in the image.</description>
+    </member>
+
+  <member>
+      <code>float *max;</code>
+      <description>Pointer to an array containing the maximum intensities for each color in the image.</description>
+    </member>
+
+
+  <member>
+      <code>int wdt;</code>
+      <description>Width of the image in pixels.</description>
+    </member>
+
+   <member>
+      <code>int hgt;</code>
+      <description>Height of the image in pixels.</description>
+    </member>
+
+
+
+    <member>
+      <struct>
+
+  <member>
+      <code>unsigned char flg;</code>
+      <description>Flag indicating whether the pixel maps to a point on the surface of the Earth. A value of zero indicates that it does not, a non-zero value indicates that it does.</description>
+    </member>
+
+
+    <member>
+      <code>float glat;</code>
+      <description>Geographic latitude on the Earth that the pixel maps to.</description>
+    </member>
+
+    <member>
+      <code>float glon;</code>
+      <description>Geographic longitude on the Earth that the pixel maps to.</description>
+    </member>
+
+
+    <member>
+      <code>float mlat;</code>
+      <description>Geomagnetic latitude on the Earth that the pixel maps to.</description>
+    </member>
+
+    <member>
+      <code>float mlon;</code>
+      <description>Geomagnetic longitude on the Earth that the pixel maps to.</description>
+    </member>
+
+       </struct>
+       <code>c;</code>
+       <description>Information about the center pixel.</description>
+    </member>
+
+
+   <member>
+      <code>int colors;</code>
+      <description>Number of color channels.</description>
+    </member>
+
+
+   <member>
+      <code>int numpix;</code>
+      <description>Total number of pixels, equal to width multiplied by height multiplied by color channels.</description>
+    </member>
+
+   <member>
+      <code>int numpnt;</code>
+      <description>Total number of points, equal to width multiplied by height.</description>
+    </member>
+
+  <member>
+      <code><sn href="structSImagePnt.html">struct SImagePnt</sn> *pnt;</code>
+      <description>Pointer to an array of structures that describe each point in the image.</description>
+    </member>
+
+   <member>
+      <code>float *data;</code>
+      <description>Color data.</description>
+    </member>
+
+</struct>
+
+<description>
+<p>The <sn href="structSImage.html">struct SImage</sn> structure stores an image.</p>
+</description>
+
+</structure>
+
+
+<structure>
+ <name>SImageIndex</name>
+ <location>src.lib/imagery/simage</location>
+ <header>imagery/simageindex.h</header>
+ <struct>
+
+    <member>
+      <code>int num;</code>
+      <description>Number of records in the data file.</description>
+    </member>
+    <member>
+      <struct>
+        <member>
+         <code>double *start;</code>
+         <description>Pointer to an array of record start times, specified as seconds from 0:00UT January 1, 1970.</description>
+         </member>
+         <member>
+         <code>double *end;</code>
+         <description>Pointer to an array of record end times, specified as seconds from 0:00UT January 1, 1970.</description>
+         </member>
+       </struct>
+       <code>time;</code>
+       <description>Record timestamps.</description>
+
+    </member>
+
+   <member>
+      <code>int *offset;</code>
+      <description>Pointer to an array of byte offsets into the file marking the start of a record.</description>
+    </member>
+</struct>
+
+<description>
+<p>The <sn href="structSImageIndex.html">struct SImageIndex</sn> structure stores an index to a file containing imagery data.</p>
+</description>
+</structure>
+
+<structure>
+ <name>SImagePnt</name>
+ <location>src.lib/imagery/simage</location>
+ <header>imagery/simage.h</header>
+ <struct>
+
+    <member>
+      <struct>
+        <member>
+         <code>int sec;</code>
+         <description>Second component of the time at which the pixel was imaged, specified as seconds from 0:00UT January 1, 1970.</description>
+         </member>
+         <member>
+         <code>int usec;</code>
+         <description>Microsecond component of the time at which the pixel was imaged.</description>
+         </member>
+       </struct>
+       <code>time;</code>
+       <description>Time at which the pixel was imaged.</description>
+
+    </member>
+
+    <member>
+      <code>unsigned char flg;</code>
+      <description>Flag indicating whether the pixel maps to a point on the surface of the Earth. A value of zero indicates that it does not, a non-zero value indicates that it does.</description>
+    </member>
+
+    <member>
+      <code>int x;</code>
+      <description>X coordinate of the pixel in the image.</description>
+    </member>
+   <member>
+      <code>int y;</code>
+      <description>Y coordinate of the pixel in the image.</description>
+    </member>
+
+    <member>
+      <code>float glat;</code>
+      <description>Geographic latitude on the Earth that the pixel maps to.</description>
+    </member>
+
+    <member>
+      <code>float glon;</code>
+      <description>Geographic longitude on the Earth that the pixel maps to.</description>
+    </member>
+
+
+    <member>
+      <code>float mlat;</code>
+      <description>Geomagnetic latitude on the Earth that the pixel maps to.</description>
+    </member>
+
+    <member>
+      <code>float mlon;</code>
+      <description>Geomagnetic longitude on the Earth that the pixel maps to.</description>
+    </member>
+
+    <member>
+      <code>float alt;</code>
+      <description>Altitude above the surface of the  Earth that the pixel maps to.</description>
+    </member>
+
+
+
+  </struct>
+<description>
+<p>The <sn href="structSImagePnt.html">struct SImagePnt</sn> structure stores information about a single pixel in imagery data.</p>
+</description>
+</structure>
+
+
+</library>

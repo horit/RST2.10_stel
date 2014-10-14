@@ -1,0 +1,9 @@
+# $Log: version.info,v $
+# Revision 1.2  2005/04/14 15:07:25  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/10/07 19:43:17  barnes
+# Initial revision
+#
+#
+oldgtablewrite.c 1.02

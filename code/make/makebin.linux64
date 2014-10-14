@@ -1,0 +1,74 @@
+# Makefile for binary files
+# =========================
+# by R.J.Barnes
+#
+#
+
+# Linux (GCC)
+#
+
+
+
+ifdef XPATH
+  ifdef XLIB
+    CFLAGS =-fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX -D_XLIB_ $(INCLUDE)
+    XLIBS=-L/usr/X11R6/lib64 -lX11 -lXext
+  else
+    CFLAGS=-fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX $(INCLUDE)
+    XLIBS=
+  endif
+else
+  CFLAGS =-fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX $(INCLUDE)
+  XLIBS=
+  XLIB=
+endif
+
+LFLAGS = -L$(LIBPATH) -L$(USR_LIBPATH)
+
+DFL=-Wl,-Bdynamic
+ARC=-Wl,-Bstatic
+SHR=-Wl,-Bdynamic
+
+# Library identifier letters
+
+# By default statically link the all programs
+
+LNK=$(ARC)
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<    
+
+$(OUTPUT): version $(OBJS)
+	$(CC) $(LFLAGS) -o $(OUTPUT) $(OBJS) $(LNK) $(LIBS) $(XLIB) $(DFL) \
+                           $(SLIB) $(XLIBS)  
+ifdef IGNVER
+version: ${SRC}
+	
+else  
+version: version.info $(SRC) 
+	$(BINPATH)/rcsv -t version.info
+	$(BINPATH)/rcsv -h version.info > version.h
+endif
+
+clean:
+	rm -f *.o
+	rm -f $(OUTPUT)
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

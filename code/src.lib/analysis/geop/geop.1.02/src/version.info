@@ -1,0 +1,16 @@
+# $Log: version.info,v $
+# Revision 1.2  2004/04/26 21:22:38  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2004/04/26 15:50:05  barnes
+# Initial revision
+#
+#
+crdnt.c 1.07
+geogsm.c 1.01
+gsegsm.c 1.01
+gsmgeo.c 1.01
+gsmgse.c 1.01
+gsmsm.c 1.01
+matcald.c 1.04
+smgsm.c 1.01

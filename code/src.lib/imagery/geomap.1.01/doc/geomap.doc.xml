@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>geomap</name>
+<location>src.lib/imagery/geomap</location>
+
+<function>
+<name>GeoMap</name>
+<location>src.lib/imagery/geomap</location>
+<header>imagery/gmap.h</header>
+<syntax>void GeoMap(int wdt,int hgt,
+                    int (*trf)(int ssze,void *src,int dsze,
+                    void *dst,void *dptr),
+                    void *data,float **latptr,float **lonptr);</syntax>
+<description><p>The <fn href="GeoMap.html">GeoMap</fn> function generates a rectangular grid containing interpolated latitudes and longitudes using the specified map projection.</p>
+<p>The width and height of the grid are given by the arguments <ar>wdt</ar> and <ar>hgt</ar>.</p>
+<p>The argument <ar>trnf</ar> is a pointer to a function of the form:</p>
+
+<fd>int (*trnf) (int ssze,void *src,int dsze,void *dst,void *dptr);</fd>
+<p>This function performs the transformation of the map projection.</p>
+<p>The size in bytes of the input coordinate is given be the argument <ar>ssze</ar>. The coordinate data is pointed to by the argument <ar>src</ar>. The first two elements stored in the coordinate data block are assumed to be single precision floating point numbers of type float that represent the actual latitude and longitude of the point to transform.</p>
+<p>The size in bytes of the output coordinate is given be the argument <ar>dsze</ar>. The coordinate data is pointed to by the argument <ar>dst</ar>. The first two elements stored in the coordinate data block are assumed to be single precision floating point numbers of type float that represent the cartesian coordinate that results from the transformation. The range of the cartesian coordinates should be zero to (1).</p>
+<p>The transformation should read the coordinate from <ar>src</ar>, transform it and write the value to <ar>dst</ar>.</p>
+<p>The <ar>data</ar> argument of the  <fn href="GeoMap.html">GeoMap</fn> function is passed directly as the <ar>dptr</ar> argument of the transform and allows extra parameters to be passed to the function.</p>
+<p>The function should return a zero if the transformation was successfully applied or (-1) if an error occurred.</p>
+<p>The <fn href="GeoMap.html">GeoMap</fn> function allocates two memory buffers containing two-dimensional arrays of floating point numbers of size equal to the width and height arguments. These arrays are used to store the interpolated latitudes and longitudes. For coordinates that are not on the globe, the value stored in the array is set to (-400).</p>
+<p>The pointers to the arrays are stored at the locations given by the arguments <ar>latptr</ar> and <ar>lonptr</ar>. When the arrays are no longer required the memory allocated to store them should be freed.</p>
+</description> 
+<returns>None.</returns>
+<errors>None.</errors>
+
+<example type="rplot">GeoMap</example>  
+<example type="source">GeoMap.c</example>
+
+
+</function>
+
+</library>
+
+

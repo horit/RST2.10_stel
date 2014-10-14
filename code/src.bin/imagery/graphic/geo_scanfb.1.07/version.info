@@ -1,0 +1,28 @@
+# $Log: version.info,v $
+# Revision 1.7  2005/08/17 15:23:54  barnes
+# Added the ability to change the time of the plot independently from the
+# time of the last scan plotted.
+#
+# Revision 1.6  2005/08/11 14:33:21  barnes
+# Added option to dump command line options.
+#
+# Revision 1.5  2004/11/17 16:15:44  barnes
+# Fixed version file.
+#
+# Revision 1.4  2004/11/17 00:46:05  barnes
+# Modification in the way the mask is handled for PPM files.
+#
+# Revision 1.3  2004/06/21 22:14:39  barnes
+# Added missing header.
+#
+# Revision 1.2  2004/06/08 20:48:41  barnes
+# Fixed bug in determining output types.
+#
+# Revision 1.1  2004/05/10 18:18:59  barnes
+# Initial revision
+#
+#
+clip.c 1.01
+geo_scanfb.c 1.07
+key.c 1.02
+map.c 1.03

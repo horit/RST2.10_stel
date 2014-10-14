@@ -1,0 +1,17 @@
+# $Log: version.info,v $
+# Revision 1.1  2005/07/06 20:42:10  barnes
+# Initial revision
+#
+#
+aacgmlib.pro 1.01
+acflib.pro 1.01
+fitlib.pro 1.02
+genlib.pro 1.01
+geoplib.pro 1.01
+global.pro 1.02
+gridlib.pro 1.01
+igrflib.pro 1.01
+istplib.pro 1.01
+maplib.pro 1.01
+rawlib.pro 1.03
+rbposlib.pro 1.02

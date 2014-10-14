@@ -1,0 +1,60 @@
+# $Log: version.info,v $
+# Revision 1.15  2007/04/06 18:32:47  code
+# Fixed bug in oldfit in setting the beam azimuth.
+#
+# Revision 1.14  2007/02/05 22:24:32  code
+# Fixed lag table.
+#
+# Revision 1.13  2007/01/22 15:23:46  code
+# Modified  RadarExternalGeochrt to get the beam number and range from the hardware information.
+#
+# Revision 1.12  2006/09/14 21:52:30  code
+# Removed debugging code from raw.pro.
+#
+# Revision 1.11  2006/09/14 19:33:02  code
+# Fixed bug in decoding time in the rawacf and fitacf native seek routines.
+#
+# Revision 1.10  2006/08/17 14:43:15  code
+# Added origin code and dummy azimuth to the old read routines.
+#
+# Revision 1.9  2006/08/17 14:24:36  code
+# Added support for beam azimuth in cfit files.
+#
+# Revision 1.8  2006/07/18 18:20:09  code
+# Fixed bug in determining hardware again.
+#
+# Revision 1.7  2006/07/13 14:21:37  code
+# Modification to incorporate the origin code.
+#
+# Revision 1.6  2006/07/07 20:15:33  code
+# Fixed bugs in getting the correct site info.
+#
+# Revision 1.5  2006/07/07 20:12:33  code
+# Fixed bug in getting the site info.
+#
+# Revision 1.4  2006/04/13 15:56:40  barnes
+# Fixed bug in loading radar hardware.
+#
+# Revision 1.3  2006/03/16 20:58:02  barnes
+# Modifications to deal with radars with extra beams.
+#
+# Revision 1.2  2006/02/09 18:48:07  barnes
+# Changed microseconds to long integers.
+#
+# Revision 1.1  2005/07/06 20:47:00  barnes
+# Initial revision
+#
+#
+cfit.pro 1.04
+cnvmap.pro 1.02
+fitacf.pro 1.03
+fitcnx.pro 1.03
+fit.pro 1.09
+grd.pro 1.02
+oldcnvmap.pro 1.02
+oldfit.pro 1.08
+oldgrd.pro 1.09
+oldraw.pro 1.10
+radar.pro 1.09
+raw.pro 1.11
+rprm.pro 1.05

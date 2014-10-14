@@ -1,0 +1,50 @@
+# Makefile for the libraries
+# =======================================
+# by R.J.Barnes
+#
+#
+
+# Linux (GCC)
+#
+
+CFLAGS = -fPIC -Wall -O3 -ansi -D_GNU_SOURCE -D_LINUX $(INCLUDE)
+LFLAGS = -shared  
+SUF=so
+ifdef IGNVER
+ VSTR="1.01"
+else 
+  VSTR=$(shell $(BINPATH)/rcsv -v version.info)
+endif
+
+# By default statically link the all programs
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<    
+
+$(OUTPUT): version $(OBJS)
+	ar -r $(DSTPATH)/lib$(OUTPUT).$(VSTR).a $(OBJS)
+	$(LD) $(LFLAGS) -o $(DSTPATH)/lib$(OUTPUT).$(VSTR).$(SUF) \
+              $(OBJS) -Bstatic -L$(LIBPATH) $(SLIB)
+	ln -sf $(DSTPATH)/lib$(OUTPUT).$(VSTR).a \
+              $(DSTPATH)/lib$(OUTPUT).$(LINK).a 
+	ln -sf $(DSTPATH)/lib$(OUTPUT).$(VSTR).so \
+              $(DSTPATH)/lib$(OUTPUT).$(LINK).so 
+ifdef IGNVER
+version: ${SRC}
+else
+version: version.info $(SRC)
+	$(BINPATH)/rcsv -t version.info	
+	$(BINPATH)/rcsv -h version.info > version.h
+endif
+
+clean:
+	rm -f *.o
+
+
+
+ 
+
+
+
+
+

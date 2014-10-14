@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>change.cgi</name>
+<location>src.bin/general/database/change.cgi</location>
+<syntax>change.cgi</syntax>
+<synopsis><p>CGI script for processing change requests to an online database.</p></synopsis>
+<description><p>CGI script for processing change requests to an online database.</p></description>
+
+
+
+</binary>

@@ -1,0 +1,32 @@
+# $Log: version.info,v $
+# Revision 1.8  2007/04/05 15:47:39  code
+# Fixed problems with types on QNX4
+#
+# Revision 1.7  2006/09/15 19:16:08  code
+# Fixed types.
+#
+# Revision 1.6  2005/08/05 20:34:13  barnes
+# Added option to dump the command line options
+#
+# Revision 1.5  2004/08/27 22:31:03  barnes
+# Added missing header.
+#
+# Revision 1.4  2004/06/21 21:41:20  barnes
+# Added missing header.
+#
+# Revision 1.3  2004/04/30 22:15:46  barnes
+# Changed macro definition.
+#
+# Revision 1.2  2004/04/27 14:50:18  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/02/23 00:01:56  barnes
+# Initial revision
+#
+#
+connect.c 1.05
+fork.c 1.02
+ipserver.c 1.04
+log_info.c 1.02
+msg_mem.c 1.03
+socket.c 1.06

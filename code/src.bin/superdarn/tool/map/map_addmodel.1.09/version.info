@@ -1,0 +1,30 @@
+# $Log: version.info,v $
+# Revision 1.9  2005/08/10 22:31:40  barnes
+# Added option to dump command line options.
+#
+# Revision 1.8  2004/10/12 22:43:09  barnes
+# Moved to the DataMap format.
+#
+# Revision 1.7  2004/05/10 22:05:35  barnes
+# Removed redundant code.
+#
+# Revision 1.6  2003/03/09 17:35:18  barnes
+# Changed AACGM header name.
+#
+# Revision 1.5  2003/02/26 16:20:48  barnes
+# Modification to deal with base libraries.
+#
+# Revision 1.4  2002/04/12 14:58:07  barnes
+# Fixed bug in Southern Hemisphere code.
+#
+# Revision 1.3  2001/10/24 12:46:51  barnes
+# Initial modifications for Southern Hemisphere.
+#
+# Revision 1.2  2001/06/27 21:09:38  barnes
+# Added license tag
+#
+# Revision 1.1  2001/06/21 16:10:28  barnes
+# Initial revision
+#
+#
+map_addmodel.c 1.13

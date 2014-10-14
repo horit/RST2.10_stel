@@ -1,0 +1,32 @@
+# $Log: version.info,v $
+# Revision 1.8  2006/02/03 21:42:22  barnes
+# Fixed a long standing niggling bug in cylindrical projections.
+#
+# Revision 1.7  2006/02/03 21:31:19  barnes
+# Commented out suspect code in the plot routine - the purpose of which is
+# not known.
+#
+# Revision 1.6  2004/06/22 17:25:45  barnes
+# Changed references of Long to Int.
+#
+# Revision 1.5  2004/05/05 15:04:28  barnes
+# Added missing header.
+#
+# Revision 1.4  2004/05/04 22:45:13  barnes
+# Changed math header name.
+#
+# Revision 1.3  2004/05/04 18:00:53  barnes
+# Renamed the type header to avoid confusion.
+#
+# Revision 1.2  2004/04/26 21:03:26  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2003/02/24 21:58:59  barnes
+# Initial revision
+#
+#
+clip.c 1.04
+load.c 1.06
+plot.c 1.06
+transform.c 1.05
+wrap.c 1.05

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<library>
+<name>plot</name>
+<location>src.lib/general/plot</location>
+<function>
+<name>PlotBar</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotBar(struct PlotData *plt,int num, double ax,double ay,double w,double o, double xmin,double xmax, double ymin,double ymax,int or,int fill, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotBezier</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotBezier(struct PlotData *plt,int num, double ax,double ay,double bx,double by, double cx,double cy,double dx,double dy, double xmin,double xmax, double ymin,double ymax, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotClipPanel</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotClipPanel(struct PlotData *plt,int num);</syntax>
+</function>
+<function>
+<name>PlotEllipse</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotEllipse(struct PlotData *plt,int num, struct RplotMatrix *matrix, double x,double y,double w,double h, double xmin,double xmax, double ymin,double ymax, int fill,unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotFill</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotFill(struct PlotData *plt,int num, double ax,double ay,double bx,double by, double xmin,double xmax, double ymin,double ymax,int or, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotFitImage</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotFitImage(struct PlotData *plt,int num, struct FrameBuffer *img, unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotFitImageName</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotFitImageName(struct PlotData *plt,int num, char *name,int iwdt,int ihgt, unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotFree</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>void PlotFree(struct PlotData *ptr);</syntax>
+</function>
+<function>
+<name>PlotGetPoint</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotGetPoint(struct PlotData *plt,int num, double x,double y, double xmin,double xmax, double ymin,double ymax,float *px,float *py);</syntax>
+</function>
+<function>
+<name>PlotImage</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotImage(struct PlotData *plt,int num, struct RplotMatrix *matrix, struct FrameBuffer *img,float dx,float dy, double x,double y, double xmin,double xmax, double ymin,double ymax, unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotImageName</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotImageName(struct PlotData *plt,int num, struct RplotMatrix *matrix, char *name,float dx,float dy, double x,double y, double xmin,double xmax, double ymin,double ymax, unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotKey</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotKey(struct PlotData *plt,int num, float xoff,float yoff, float wdt,float hgt, double xmin,double xmax,double step, int key_flg,int ttl_num,char *ttl_txt, char * (*make_text)(double,double,double,void *), void *textdata, char *fntname,float fntsze, PlotKeyLog</syntax>
+</function>
+<function>
+<name>PlotKeyLog</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotKeyLog(struct PlotData *plt,int num, float xoff,float yoff, float wdt,float hgt, double xmin,double xmax,double tick_major,double tick_minor, int key_flg,int ttl_num,char *ttl_txt, char * (*make_text)(double,double,double,void *), void *textdata, cPlotLine</syntax>
+</function>
+<function>
+<name>PlotLine</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotLine(struct PlotData *plt,int num, double ax,double ay,double bx,double by, double xmin,double xmax, double ymin,double ymax, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotMake</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>struct PlotData *PlotMake(float wdt,float hgt, int xnum,int ynum,float lpad,float rpad, float bpad,float tpad,float xoff,float yoff);</syntax>
+</function>
+<function>
+<name>PlotPanel</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotPanel(struct PlotData *plt,int num,unsigned int color, unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotPolygon</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotPolygon(struct PlotData *plt,int num,struct RplotMatrix *matrix,double x,double y,int n,double *px,double *py,int *t, double xmin,double xmax, double ymin,double ymax, int fill,unsigned int color,unsigned char mask,float width, struct RplotDash *daPlotRawBar</syntax>
+</function>
+<function>
+<name>PlotRawBar</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawBar(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ax,double ay,double w,double o,double xmin,double xmax, double ymin,double ymax,int or,int fill, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotRawBezier</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawBezier(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ax,double ay,double bx,double by, double cx,double cy,double dx,double dy, double xmin,double xmax, double ymin,double ymax, unsigned int color,unsigned char mask,float widtPlotRawClipPanel</syntax>
+</function>
+<function>
+<name>PlotRawClipPanel</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawClipPanel(struct Rplot *ptr,float x,float y,float wdt,float hgt);</syntax>
+</function>
+<function>
+<name>PlotRawContour</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawContour(struct Rplot *rplot,struct PolygonData *ptr, float xoff,float yoff,float wdt,float hgt, float step,float smooth,float lwdt, int lstart,int lstep, int sze,char *text, unsigned int color,char mask,float width, struct RplotDash *dash, char PlotRawEllipse</syntax>
+</function>
+<function>
+<name>PlotRawEllipse</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawEllipse(struct Rplot *ptr, struct RplotMatrix *matrix, float ox,float oy,float wdt,float hgt, double x,double y,double w,double h,double xmin,double xmax, double ymin,double ymax, int fill,unsigned int color,unsigned char mask,float width, strucPlotRawFill</syntax>
+</function>
+<function>
+<name>PlotRawFill</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawFill(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ax,double ay,double bx,double by,double xmin,double xmax, double ymin,double ymax,int or, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotRawFitImage</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawFitImage(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, struct FrameBuffer *img, unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotRawFitImageName</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawFitImageName(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, char *name,int iwdt,int ihgt, unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotRawGetPoint</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawGetPoint(float ox,float oy,float wdt,float hgt, double x,double y,double xmin,double xmax,double ymin, double ymax,float *px,float *py);</syntax>
+</function>
+<function>
+<name>PlotRawImage</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawImage(struct Rplot *ptr, struct RplotMatrix *matrix, float ox,float oy,float wdt,float hgt, struct FrameBuffer *img,float dx,float dy, double x,double y,double xmin,double xmax, double ymin,double ymax, unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotRawImageName</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawImageName(struct Rplot *ptr, struct RplotMatrix *matrix, float ox,float oy,float wdt,float hgt, char *name,float dx,float dy, double x,double y, double xmin,double xmax, double ymin,double ymax, unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotRawKey</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawKey(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double min,double max,  double tick_major,double tick_minor, float major_size,float minor_size, float txt_off,float ttl_off, int tick_flg,int txt_flg,int ttl_flg, int txt_or,int ttl_oPlotRawKeyLog</syntax>
+</function>
+<function>
+<name>PlotRawKeyLog</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawKeyLog(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double min,double max, double tick_major,double tick_minor, float major_size,float minor_size, float txt_off,float ttl_off, int tick_flg,int txt_flg,int ttl_flg, int txt_or,int ttlPlotRawLine</syntax>
+</function>
+<function>
+<name>PlotRawLine</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawLine(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ax,double ay,double bx,double by,double xmin,double xmax, double ymin,double ymax, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotRawPanel</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawPanel(struct Rplot *ptr,float x,float y,float wdt,float hgt, unsigned int color,unsigned char mask, float width);</syntax>
+</function>
+<function>
+<name>PlotRawPolygon</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawPolygon(struct Rplot *ptr, struct RplotMatrix *matrix, float ox,float oy,float wdt,float hgt, double x,double y,int num,double *px,double *py, int *t,double xmin,double xmax, double ymin,double ymax, int fill,unsigned int color,unsigned char masPlotRawRectangle</syntax>
+</function>
+<function>
+<name>PlotRawRectangle</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawRectangle(struct Rplot *ptr, struct RplotMatrix *matrix, float ox,float oy,float wdt,float hgt, double x,double y,double w,double h,double xmin,double xmax, double ymin,double ymax, int fill,unsigned int color,unsigned char mask,float width, strPlotRawText</syntax>
+</function>
+<function>
+<name>PlotRawText</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawText(struct Rplot *ptr, struct RplotMatrix *matrix, float ox,float oy,float wdt,float hgt, char *fontname,float fontsize, double x,double y,int num,char *txt, float dx,float dy,double xmin,double xmax, double ymin,double ymax, unsigned int colorPlotRawXaxis</syntax>
+</function>
+<function>
+<name>PlotRawXaxis</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawXaxis(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double xmin,double xmax, double tick_major,double tick_minor, float major_hgt,float minor_hgt,int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotRawXaxisLabel</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawXaxisLabel(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double xmin,double xmax,double step, float offset,int txt_flg,int or, int (*text_box)(char *,float,int,char *,float *,void *), void *boxdata, char * (*make_text)(double,double,PlotRawXaxisLabelValue</syntax>
+</function>
+<function>
+<name>PlotRawXaxisLabelValue</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawXaxisLabelValue(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double xmin,double xmax,double value, float offset,int txt_flg,int or, int (*text_box)(char *,float,int,char *,float *,void *), void *boxdata, int sze,char *text, char *fnPlotRawXaxisLog</syntax>
+</function>
+<function>
+<name>PlotRawXaxisLog</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawXaxisLog(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double xmin,double xmax, double tick_major,double tick_minor, float major_hgt,float minor_hgt,int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotRawXaxisTitle</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawXaxisTitle(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, float offset,int txt_flg,int or, int (*text_box)(char *,float,int,char *,float *,void *), void *boxdata, int sze,char *text, char *fntname,float fntsze, unsigned int color,unsiPlotRawXaxisValue</syntax>
+</function>
+<function>
+<name>PlotRawXaxisValue</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawXaxisValue(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double xmin,double xmax,double value, float tick_hgt,int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotRawXzero</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawXzero(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double xmin,double xmax, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotRawYaxis</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawYaxis(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ymin,double ymax, double tick_major,double tick_minor, float major_wdt,float minor_wdt,int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotRawYaxisLabel</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawYaxisLabel(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ymin,double ymax,double step, float offset,int txt_flg,int or, int (*text_box)(char *,float,int,char *,float *,void *), void *boxdata, char * (*make_text)(double,double,PlotRawYaxisLabelValue</syntax>
+</function>
+<function>
+<name>PlotRawYaxisLabelValue</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawYaxisLabelValue(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ymin,double ymax,double value, float offset,int txt_flg,int or, int (*text_box)(char *,float,int,char *,float *,void *), void *boxdata, int sze,char *text, char *fnPlotRawYaxisLog</syntax>
+</function>
+<function>
+<name>PlotRawYaxisLog</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawYaxisLog(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ymin,double ymax, double tick_major,double tick_minor, float major_wdt,float minor_wdt,int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotRawYaxisTitle</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawYaxisTitle(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, float offset,int txt_flg,int or, int (*text_box)(char *,float,int,char *,float *,void *), void *boxdata, int sze,char *text, char *fntname,float fntsze, unsigned int color,unsiPlotRawYaxisValue</syntax>
+</function>
+<function>
+<name>PlotRawYaxisValue</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawYaxisValue(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ymin,double ymax,double value, float tick_wdt,int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotRawYzero</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRawYzero(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double ymin,double ymax, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotRectangle</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotRectangle(struct PlotData *plt,int num, struct RplotMatrix *matrix, double x,double y,double w,double h, double xmin,double xmax, double ymin,double ymax, int fill,unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotSetRplot</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotSetRplot(struct PlotData *plt,struct Rplot *rplot);</syntax>
+</function>
+<function>
+<name>PlotSetTextBox</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotSetTextBox(struct PlotData *plt, int (*text)(char *,float,int,char *,float *,void *), void *data);</syntax>
+</function>
+<function>
+<name>PlotStdKey</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotStdKey(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double min,double max,double step, int or,int txt_or,int tflg,  int ttl_num,char *ttl_text, int (*text_box)(char *,float,int,char *,float *,void *), void *boxdata, char * (*make_text)PlotStdKeyLog</syntax>
+</function>
+<function>
+<name>PlotStdKeyLog</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotStdKeyLog(struct Rplot *ptr, float ox,float oy,float wdt,float hgt, double min,double max,double tick_major,double tick_minor, int or,int txt_or,int tflg,  int ttl_num,char *ttl_text, int (*text_box)(char *,float,int,char *,float *,void *), void *bPlotText</syntax>
+</function>
+<function>
+<name>PlotText</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotText(struct PlotData *plt,int num, struct RplotMatrix *matrix,char *fontname, float fontsize,double x,double y, int n,char *txt,float dx,float dy, double xmin,double xmax, double ymin,double ymax, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotXaxis</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotXaxis(struct PlotData *plt,int num, double xmin,double xmax, double tick_major,double tick_minor, int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotXaxisLabel</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotXaxisLabel(struct PlotData *plt,int num, double xmin,double xmax,double step, int txt_flg, char * (*make_text)(double,double,double,void *), void *textdata, char *fntname,float fntsze, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotXaxisLabelValue</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotXaxisLabelValue(struct PlotData *plt,int num, double xmin,double xmax,double value,int txt_flg, int sze,char *text, char *fntname,float fntsze, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotXaxisLog</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotXaxisLog(struct PlotData *plt,int num, double xmin,double xmax, double tick_major,double tick_minor, int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotXaxisTitle</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotXaxisTitle(struct PlotData *plt,int num, int txt_flg, int sze,char *text, char *fntname,float fntsze, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotXaxisTitleOffset</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotXaxisTitleOffset(struct PlotData *plt,int num, int txt_flg, int sze,char *text,float offset,char *fntname,float fntsze, unsigned int color,unsigned char mask);</syntax>
+</function>
+
+<function>
+<name>PlotXaxisValue</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotXaxisValue(struct PlotData *plt,int num, double xmin,double xmax,double value, float tick_hgt,int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotXzero</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotXzero(struct PlotData *plt,int num, double xmin,double xmax, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+<function>
+<name>PlotYaxis</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotYaxis(struct PlotData *plt,int num, double ymin,double ymax, double tick_major,double tick_minor, int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotYaxisLabel</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotYaxisLabel(struct PlotData *plt,int num, double ymin,double ymax,double step, int txt_flg, char * (*make_text)(double,double,double,void *), void *textdata, char *fntname,float fntsze, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotYaxisLabelValue</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotYaxisLabelValue(struct PlotData *plt,int num, double ymin,double ymax,double value, int txt_flg, int sze,char *text, char *fntname,float fntsze, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotYaxisLog</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotYaxisLog(struct PlotData *plt,int num, double ymin,double ymax, double tick_major,double tick_minor, int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotYaxisTitle</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotYaxisTitle(struct PlotData *plt,int num, int txt_flg, int sze,char *text, char *fntname,float fntsze, unsigned int color,unsigned char mask);</syntax>
+</function>
+<function>
+<name>PlotYaxisTitleOffset</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotYaxisTitleOffset(struct PlotData *plt,int num, int txt_flg, int sze,char *text,float offset, char *fntname,float fntsze, unsigned int color,unsigned char mask);</syntax>
+</function>
+
+<function>
+<name>PlotYaxisValue</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotYaxisValue(struct PlotData *plt,int num, double ymin,double ymax,double value, float tick_hgt,int tick_flg, unsigned int color,unsigned char mask,float width);</syntax>
+</function>
+<function>
+<name>PlotYzero</name>
+<location>src.lib/general/plot</location>
+<header>general/rplotg.h</header>
+<syntax>int PlotYzero(struct PlotData *plt,int num, double ymin,double ymax, unsigned int color,unsigned char mask,float width, struct RplotDash *dash);</syntax>
+</function>
+</library>

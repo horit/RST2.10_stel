@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>makesimageinx</name>
+<location>src.bin/imagery/process/makesimageinx</location>
+<syntax>makesimageinx --help</syntax>
+<syntax>makesimageinx [<ar>filename</ar>]</syntax>
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+<option><on><ar>filename</ar></on><od>filename of the SImage files to process, if this is omitted the file will be read from standard input.</od>
+</option>
+<synopsis><p>Generate an index to an SImage file.</p></synopsis>
+<description><p>Generate an index to an SImage file.</p>
+<p>The index file is written to standard output.</p>
+<p>SImage files can contain multiple images, and the index file allows the plotting software to quickly find a particular image in the file.</p></description>
+<example>
+<command>makesimageinx test.simage &gt; test.inx</command>
+<description>Make an index from the SImage file "<code>test.simage</code>" and write it to the file "<code>test.inx</code>". 
+</description>
+</example>
+
+</binary>

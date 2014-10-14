@@ -1,0 +1,12 @@
+# $Log: version.info,v $
+# Revision 1.3  2005/08/05 20:26:30  barnes
+# Added option to dump the command line options
+#
+# Revision 1.2  2004/06/21 21:33:26  barnes
+# Moved the "name" variable.
+#
+# Revision 1.1  2004/05/10 18:38:47  barnes
+# Initial revision
+#
+#
+ppmxd.c 1.04

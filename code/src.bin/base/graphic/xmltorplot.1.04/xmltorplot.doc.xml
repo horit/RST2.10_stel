@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>xmltorplot</name>
+<location>src.bin/base/graphic/xmltorplot</location>
+<syntax>xmltorplot --help</syntax>
+<syntax>xmltorplot [-smooth] [-wdt <ar>width</ar>] [-hgt <ar>height</ar>] [<ar>name</ar>]</syntax>
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+<option><on>-smooth</on><od>apply smoothing to the image when it is rendered in the rPlot document.</od>
+</option>
+<option><on>-wdt <ar>width</ar></on><od>set the width of the image in the rPlot document to <ar>width</ar> units.</od>
+</option>
+<option><on>-hgt <ar>height</ar></on><od>set the height of the image in the rPlot document to <ar>height</ar> units.</od>
+</option>
+<option><on><ar>name</ar></on><od>input image filename. If this is omitted the image  will be read from standard input.</od>
+</option>
+<synopsis><p>Convert an XML image representation to an rPlot document.</p></synopsis>
+
+
+<description><p>Convert an XML image representation to an rPlot document.</p>
+<p>The rPlot document is written to standard output.</p>
+</description>
+
+
+<example>
+<command>xmltorplot inp.xml &gt; out.rplot</command>
+<description>Convert XML file <code>inp.xml</code> to the rPlot file <code>out.rplot</code>.
+</description>
+</example>
+
+
+
+
+</binary>

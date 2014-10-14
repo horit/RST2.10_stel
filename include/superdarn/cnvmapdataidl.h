@@ -1,0 +1,1 @@
+../../code/src.lib/superdarn/idl/cnvmapidl.1.02/include/cnvmapdataidl.h

@@ -1,0 +1,13 @@
+# $Log: version.info,v $
+# Revision 1.3  2005/08/11 14:39:05  barnes
+# Added option to dump command line options.
+#
+# Revision 1.2  2004/06/21 22:18:52  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 18:21:36  barnes
+# Initial revision
+#
+#
+clip.c 1.01
+geo_termfb.c 1.06

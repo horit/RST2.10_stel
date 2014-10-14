@@ -1,0 +1,10 @@
+# $Log: version.info,v $
+# Revision 1.2  2004/10/08 17:02:58  barnes
+# Modified griddata structure.
+#
+# Revision 1.1  2004/10/07 20:04:03  barnes
+# Initial revision
+#
+#
+oldreadgrid.c 1.02
+oldwritegrid.c 1.02

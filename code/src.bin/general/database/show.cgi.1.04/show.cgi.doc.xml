@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>show.cgi</name>
+<location>src.bin/general/database/show.cgi</location>
+<syntax>show.cgi</syntax>
+<synopsis><p>CGI script for displaying database submissions.</p></synopsis>
+<description><p>CGI script for displaying database submissions.</p></descriptions>
+
+
+</binary>

@@ -1,0 +1,9 @@
+# $Log: version.info,v $
+# Revision 1.2  2004/04/26 21:25:37  barnes
+# Audit - Enforced warning set to "all".
+#
+# Revision 1.1  2004/04/26 15:52:02  barnes
+# Initial revision
+#
+#
+sgp4.c 1.02

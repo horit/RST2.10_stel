@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>make_time</name>
+<location>src.bin/imagery/process/make_time</location>
+<syntax>make_time --help</syntax>
+<syntax>make_time [-sd <ar>yyyymmdd</ar>] [-st <ar>hr:mn</ar>] [-ed <ar>yyyymmdd</ar>] [-et <ar>hr:mn</ar>] [-ex <ar>hr:mn</ar>] [-f <ar>frames</ar>]</syntax>
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+<option><on>-sd <ar>yyyymmdd</ar></on><od>start from the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-st <ar>hr:mn</ar></on><od>start from the time <ar>hr:mn</ar>.</od>
+</option>
+<option><on>-ed <ar>yyyymmdd</ar></on><od>stop at the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-et <ar>hr:mn</ar></on><od>stop at the time <ar>hr:mn</ar>.</od>
+</option>
+<option><on>-ex <ar>hr:mn</ar></on><od>generate an interval whose extent is <ar>hr:mn</ar>.</od>
+</option>
+<option><on>-f <ar>frames</ar></on><od>generate <ar>frames</ar> number of command line string.</od>
+</option>
+<synopsis><p>Generate a sequence of text strings that fit the pattern for specifying time on the command line.</p></synopsis>
+
+<description><p>Generate a sequence of text strings that fit the pattern for specifying time on the command line.</p>
+<p>The text strings take the form:</p>
+<quote>-d <em>YYYYMMDD</em> -t <em>HH:MM:SS</em></quote>
+<p>Where <em>YYYYMMDD</em> is the date and <em>HH:MM:SS</em> is the time.</p>
+<p>The command line strings are written to standard output.</p>
+<p>This program can be used to create command line options for rendering the frames of an animation.</p>
+</description>
+<example>
+<command>make_time -sd 20040830 -st 8:30 -et 9:30 -f 100 &gt cli.txt</command>
+<description>For the hour period betwen 8:30 and 9:30 on the 30th August, 2004, generate command line string for 100 frames and store them in the file "<code>cli.txt</code>".</description>
+</example>
+ 
+
+
+</binary>

@@ -1,0 +1,21 @@
+# $Log: version.info,v $
+# Revision 1.6  2005/08/08 15:03:40  barnes
+# Added option to dump the command line options
+#
+# Revision 1.5  2004/07/14 17:51:34  barnes
+# Added error message.
+#
+# Revision 1.4  2004/07/14 17:38:13  barnes
+# Added help message.
+#
+# Revision 1.3  2004/06/22 18:15:57  barnes
+# Changed reporting of integers to int.
+#
+# Revision 1.2  2004/06/22 18:11:28  barnes
+# Changed references of Long to Int.
+#
+# Revision 1.1  2004/05/10 20:12:13  barnes
+# Initial revision
+#
+# 
+dmaptocdl.c 1.07

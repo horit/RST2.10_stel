@@ -1,0 +1,44 @@
+# $Log: version.info,v $
+# Revision 1.14  2005/08/10 20:21:33  barnes
+# Added option to dump command line options.
+#
+# Revision 1.13  2004/10/29 15:30:50  barnes
+# Fixed verbose mode.
+#
+# Revision 1.12  2004/06/04 01:44:10  barnes
+# Adopted text strings as radar identifiers.
+#
+# Revision 1.11  2004/05/10 21:51:47  barnes
+# Removed redundant code.
+#
+# Revision 1.10  2003/03/13 14:24:00  barnes
+# Removed debugging code.
+#
+# Revision 1.9  2003/02/25 23:17:38  barnes
+# Modification to use the base libraries.
+#
+# Revision 1.8  2002/02/07 16:30:29  barnes
+# Added code for filtering out a specific channel.
+#
+# Revision 1.7  2001/06/27 21:07:53  barnes
+# Added license tag
+#
+# Revision 1.6  2001/01/29 18:41:19  barnes
+# Added Author Name
+#
+# Revision 1.5  2000/08/22 15:13:20  barnes
+# Added return to main.
+#
+# Revision 1.4  2000/08/16 22:47:41  barnes
+# changed return type of main().
+#
+# Revision 1.3  2000/08/06 21:06:23  barnes
+# Improved file read speed.
+#
+# Revision 1.2  2000/07/07 21:38:08  barnes
+# General bug fixes.
+#
+# Revision 1.1  1999/12/17 19:30:50  barnes
+# Initial revision
+#
+trim_grid.c 1.23

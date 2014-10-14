@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<binary>
+<name>geo_globerp</name>
+<location>src.bin/imagery/graphic/geo_globerp</location>
+<syntax>geo_globerp --help</syntax>
+<syntax>geo_globerp [<ar>options</ar>]</syntax>
+<synopsis><p>Generate an rPlot XML plot of the Earth.</p></synopsis>
+
+
+<option><on>--help</on><od>print the help message and exit.</od>
+</option>
+
+<option><on>-cf <ar>cfname</ar></on><od>read command line options from the file <ar>cfname</ar>.</od>
+</option>
+<option><on>-wdt <ar>width</ar></on><od>set the width of the plot to <ar>width</ar>.</od>
+</option>
+<option><on>-hgt <ar>height</ar></on><od>set the height of the plot to <ar>height</ar>.</od>
+</option>
+
+<option><on>-pad <ar>pad</ar></on><od>set the paddding around the edges of the plot to <ar>pad</ar>.</od>
+</option>
+
+
+<option><on>-sf <ar>scale</ar></on><od>set the scale factor (magnification) to <ar>scale</ar>. The default scale factor is 1.</od>
+</option>
+<option><on>-ortho</on><od>use an orthographic projection.</od>
+</option>
+<option><on>-stereo</on><od>use a stereographic projection.</od>
+</option>
+<option><on>-gvp</on><od>use a general vertical projection.</od>
+</option>
+<option><on>-lat <ar>lat</ar></on><od>center the plot on the latitude given by <ar>lat</ar>.</od>
+</option>
+<option><on>-lon <ar>lon</ar></on><od>center the plot on the longitude given by <ar>lon</ar>.</od>
+</option>
+<option><on>-latmin <ar>latmin</ar></on><od>adjust the scale factor so that the lowest visible latitude is  <ar>latmin</ar>. Applies when the stereographic projection is used.</od>
+</option>
+<option><on>-mag</on><od>use magnetic coordinates.</od>
+</option>
+<option><on>-rotate</on><od>rotate the plot so that the local noon is at the top of the plot.</od>
+</option>
+<option><on>-flip</on><od>flip the direction of the X-axis.</od>
+</option>
+<option><on>-square</on><od>force the use of a square bounding box around the plot.</od>
+</option>
+<option><on>-bg</on><od>plot the background as a solid color.</od>
+</option>
+<option><on>-coast</on><od>plot coastlines.</od>
+</option>
+<option><on>-fcoast</on><od>plot filled coastlines.</od>
+</option>
+<option><on>-bnd</on><od>plot state boundaries.</od>
+</option>
+<option><on>-grd</on><od>plot a grid.</od>
+</option>
+
+<option><on>-grdlat <ar>grdlat</ar></on><od>set the latitude spacing of the grid to <ar>grdlat</ar> degrees.</od>
+</option>
+<option><on>-grdlon <ar>grdlon</ar></on><od>set the longitude spacing of the grid to <ar>grdlon</ar> degrees.</od>
+</option>
+<option><on>-igrd</on><od>plot the inverse grid, if the plot is in geographic coordinates, a geomagnetic grid is plotted, if the plot is in geomagnetic coordinates, a geographic grid is plotted.</od>
+</option>
+<option><on>-igrdlat <ar>igrdlat</ar></on><od>set the latitude spacing of the inverse grid to <ar>grdlat</ar> degrees.</od>
+</option>
+
+<option><on>-igrdlon <ar>igrdlon</ar></on><od>set the longitude spacing of the inverse grid to <ar>grdlon</ar> degrees.</od>
+</option>
+
+
+<option><on>-tgrd</on><od>plot the time grid. The grid is always aligned with Midnight.</od>
+</option>
+<option><on>-tgrdlat <ar>igrdlat</ar></on><od>set the latitude spacing of the time grid to <ar>grdlat</ar> degrees.</od>
+</option>
+
+<option><on>-tgrdlon <ar>igrdlon</ar></on><od>set the longitude spacing of the time grid to <ar>grdlon</ar> degrees.</od>
+</option>
+
+
+<option><on>-igrdontop</on><od>plot the inverse grid on top.</od>
+</option>
+<option><on>-grdontop</on><od>plot the grid on top.</od>
+</option>
+
+
+<option><on>-lst</on><od>use local solar time rather than local time.</od>
+</option>
+<option><on>-term</on><od>plot the terminator.</od>
+</option>
+<option><on>-fterm</on><od>plot a filled, graduated terminator.</od>
+</option>
+
+<option><on>-lnewdt <ar>lnewdt</ar></on><od>set the line width to <ar>lnewdt</ar>.</od>
+</option>
+<option><on>-bgcol <ar>rrggbb</ar></on><od>set the background color to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+
+
+<option><on>-grdcol <ar>rrggbb</ar></on><od>set the color of the grid to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-igrdcol <ar>rrggbb</ar></on><od>set the color of the inverse grid to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+
+<option><on>-tgrdcol <ar>rrggbb</ar></on><od>set the color of the time grid to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-cstcol <ar>rrggbb</ar></on><od>set the color of the coastline to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-bndcol <ar>rrggbb</ar></on><od>set the color of the state boundaries to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-lndcol <ar>rrggbb</ar></on><od>set the color of the land to <ar>rrggbb</ar>, specified as the  hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-seacol <ar>rrggbb</ar></on><od>set the color of the sea to <ar>rrggbb</ar>, specified as the  hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-trmcol <ar>rrggbb</ar></on><od>set the color of the terminator outline to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+<option><on>-ftrmcol <ar>rrggbb</ar></on><od>set the color of the filled terminator to <ar>rrggbb</ar>, specified as the hexadecimal value for the 24-bit red,green and blue component color.</od>
+</option>
+
+
+<option><on>-d <ar>yyyymmdd</ar></on><od>plot for the date <ar>yyyymmdd</ar>.</od>
+</option>
+<option><on>-t <ar>hr:mn</ar></on><od>plot for the time <ar>hr:mn</ar>.</od>
+</option>
+
+<option><on>-name <ar>name</ar></on><od>assign the name <ar>name</ar> to the rPlot document.</od>
+</option>
+
+
+<description><p>Generate an rPlot XML plot of the Earth.</p>
+<p>The output file is written to standard output.</p>
+<p>The task only plots what it is instructed to plot on the command line which means that at least some of the options must be included if the plot is to show anything.</p>
+<p>The default map projection is a simple cylindrical projection, the most useful projection is the stereographic projection invoked using the "<code>-stereo</code>" option.</p>
+<p>The date and time options allow a plot for a specific time to be generated this is most useful when used in conjunction with the "<code>-rotate</code>" option or the "<code>-term</code>" and "<code>-fterm</code>" options.</p>
+<p>The number and complexity of the command line options makes typing them a laborious process, especially when producing multiple plots. To solve this problem, command line options can be placed in plain text file that can be parsed by the program using the " <code>-cf</code>" option. This allows the user to create a set of configuration files for producing different plots.</p> 
+
+
+</description>
+
+<example><command>geo_globerp -stereo -lat 90 -d 20040303 -t 3:00 -mag -rotate -fterm -fcoast -coast &gt; globe.rp.xml</command>
+<description>Plot a stereographic projection of the north pole in magnetic coordinates rotated so that magnetic noon is at the top. Shade the terminator.</description>
+</example>
+
+<example type="rplot">example1</example>
+
+
+
+<example><command>geo_globerp  -lat 40 -lon -105 -grd -grdontop -ortho -d 20040303 -t 3:00 -bg -fcoast -coast &gt; globe.rp.xml</command>
+<description>Plot an orthographic projection of the Earth. Overlay the grid.</description>
+</example>
+
+<example type="rplot">example2</example>
+
+
+
+
+
+</binary>

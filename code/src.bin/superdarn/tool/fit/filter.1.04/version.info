@@ -1,0 +1,15 @@
+# $Log: version.info,v $
+# Revision 1.4  2006/03/14 22:13:04  barnes
+# Modification to deal with radars with extra beams.
+#
+# Revision 1.3  2005/08/10 18:28:21  barnes
+# Added option to dump out command line options.
+#
+# Revision 1.2  2004/10/28 13:58:09  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 21:35:18  barnes
+# Initial revision
+#
+# 
+filter.c 1.05

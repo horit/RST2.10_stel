@@ -1,0 +1,38 @@
+#!/bin/csh
+# output in number style
+#  Month Day Year 
+#	e.g., 1 25 1999
+#
+if ($#argv != 2 )then
+  echo Usage : $0 Day_of_Year Year
+  exit
+else
+  set Year = $2
+  set Day_of_Year = $1
+endif
+
+set num_of_days = ( 31 28 31 30 31 30 31 31 30 31 30 31 )
+set Month = ( Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec )
+if ( $Year % 4 == 0 ) set num_of_days[2] = 29
+
+#--- Month Search ---
+set i_month = 1
+set Dum_Doy = 0
+while ($Day_of_Year > $Dum_Doy)
+  @ Dum_Doy += $num_of_days[$i_month]
+  @ i_month++
+end
+@ i_month --
+@ Dum_Doy -= $num_of_days[$i_month]
+
+#--- Day Search ---
+set Day = 1
+while ($Day_of_Year > $Dum_Doy)
+  @ Dum_Doy ++
+  @ Day++
+end
+@ Day--
+
+echo $i_month $Day $Year
+
+exit

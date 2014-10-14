@@ -1,0 +1,22 @@
+# $Log: version.info,v $
+# Revision 1.6  2007/03/20 21:59:12  code
+# Added hidden option to restrict a file to a single day.
+#
+# Revision 1.5  2006/08/18 17:50:38  code
+# Set filtering to zero.
+#
+# Revision 1.4  2006/01/10 15:15:10  barnes
+# Changed behaviour for new file formats to allow concatenation on the
+# command line.
+#
+# Revision 1.3  2005/08/10 16:49:53  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.2  2004/10/28 13:55:29  barnes
+# Added missing header.
+#
+# Revision 1.1  2004/05/10 21:38:59  barnes
+# Initial revision
+#
+#
+make_cfit.c 1.06

@@ -1,0 +1,56 @@
+# $Log: version.info,v $
+# Revision 1.15  2007/03/09 14:14:02  code
+# Fixed search routine.
+#
+# Revision 1.14  2006/08/29 15:47:39  code
+# Fixed bug in decoding scalars.
+#
+# Revision 1.13  2005/04/13 19:44:24  barnes
+# Made sure that the initial values are set to zero.
+#
+# Revision 1.12  2005/01/13 14:52:56  barnes
+# Fixed data types.
+#
+# Revision 1.11  2004/10/12 20:58:22  barnes
+# Fixed bug in the type of the index.
+#
+# Revision 1.10  2004/10/12 20:00:58  barnes
+# Fixed bug in the gridread routine.
+#
+# Revision 1.9  2004/10/08 20:10:22  barnes
+# Changed to the DataMap format.
+#
+# Revision 1.8  2004/08/20 13:50:51  barnes
+# Fixed version error in writgrid.
+#
+# Revision 1.7  2004/08/20 13:20:27  barnes
+# Moved the actual creation of the grid data to a different library.
+#
+# Revision 1.6  2004/06/16 17:07:16  barnes
+# Added missing header.
+#
+# Revision 1.5  2004/05/05 15:47:22  barnes
+# Added missing header.
+#
+# Revision 1.4  2004/05/04 22:46:31  barnes
+# Changed math header name.
+#
+# Revision 1.3  2004/05/04 18:30:29  barnes
+# Renamed the type header to avoid confusion.
+#
+# Revision 1.2  2004/04/26 22:19:14  barnes
+# Audit - Enforced warning "all".
+#
+# Revision 1.1  2004/04/26 18:02:03  barnes
+# Initial revision
+#
+#
+addgrid.c 1.05
+avggrid.c 1.06
+copygrid.c 1.05
+integrategrid.c 1.05
+mergegrid.c 1.06
+readgrid.c 1.09
+sortgrid.c 1.04
+writegrid.c 1.04
+gridseek.c 1.03

@@ -1,0 +1,14 @@
+# $Log: version.info,v $
+# Revision 1.3  2005/08/11 14:30:12  barnes
+# Added option to dump the command line options.
+#
+# Revision 1.2  2004/05/17 21:37:31  barnes
+# Added new grids.
+#
+# Revision 1.1  2004/05/10 18:18:14  barnes
+# Initial revision
+#
+#
+clip.c 1.01
+geo_globefb.c 1.06
+make_grid.c 1.03
