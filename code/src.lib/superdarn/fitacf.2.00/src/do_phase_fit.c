@@ -152,6 +152,8 @@ int do_phase_fit (double omega_guess,
   double phitmp,phifrc,phiint;
   int n_twopi;
   int nphi;
+  float nphi_; /* modified by Pasha and Tomo. See below */
+  int mppul; /* modified by Pasha and Tomo. See below */ 
   int k;
 
   double d=0.0, e2;
@@ -275,8 +277,15 @@ int do_phase_fit (double omega_guess,
     }
   }
   wbar = wbar/nphi;
-  if (xflag) *sdev = sqrt(e2/(sum_w)*nphi/(nphi-2)); /* These two lines modified according to task 1 from DAWG on Oct 14, 2014, Pasha, Tomo */
-  else *sdev = sqrt(e2/sum_w*nphi/(nphi-1));
+  /* ------------- modifications to account for correct number of degree of freedom ----- */
+  /* made by Pasha, Tomo on Oct 16, 2013 */
+  mppul = 8 ; /* for katscan */ 
+  if ( mplgs == 18 ) mppul = 7 ; /* old 7 pulse sequence */ 
+  nphi_ = (float)mppul * (float)nphi / (float)mplgs ; 
+  if ( nphi_ <= 3 ) nphi_ = 3 ;
+  /* ------------------------------------------------------------------------------------- */
+  if (xflag) *sdev = sqrt(e2/(sum_w)*nphi_/(nphi_-2)); /* These two lines modified according to task 1 from DAWG on Oct 14, 2014, Pasha, Tomo */
+  else *sdev = sqrt(e2/sum_w*nphi_/(nphi_-1));
   
   if (xflag) {
     *phi0_err =  *sdev * wbar * sqrt(sum_wk2*t2/d);
