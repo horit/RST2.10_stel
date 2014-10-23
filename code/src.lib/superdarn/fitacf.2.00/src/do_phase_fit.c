@@ -284,8 +284,8 @@ int do_phase_fit (double omega_guess,
   nphi_ = (float)mppul * (float)nphi / (float)mplgs ; 
   if ( nphi_ <= 3 ) nphi_ = 3 ;
   /* ------------------------------------------------------------------------------------- */
-  if (xflag) *sdev = sqrt(e2/(sum_w)*nphi_/(nphi_-2)); /* These two lines modified according to task 1 from DAWG on Oct 14, 2014, Pasha, Tomo */
-  else *sdev = sqrt(e2/sum_w*nphi_/(nphi_-1));
+  if (xflag) *sdev = sqrt(e2/(sum_w)*nphi_/(nphi_-2)*mplgs/mppul); /* These two lines modified according to task 1 from DAWG on Oct 14, 2014, Pasha, Tomo */
+  else *sdev = sqrt(e2/sum_w*nphi_/(nphi_-1)*mplgs/mppul);
   
   if (xflag) {
     *phi0_err =  *sdev * wbar * sqrt(sum_wk2*t2/d);
